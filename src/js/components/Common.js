@@ -4,8 +4,9 @@ import './NoTouch';
 
 // import './Anims';
 // import './Header';
-// import './Slider';
-import './Dot';
+import './Sliders';
+import './RangeInput';
+// import './Dot';
 
 // import './ContactMap';
 

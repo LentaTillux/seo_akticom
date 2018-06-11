@@ -276,7 +276,33 @@ block main
 		+b.SECTION.clients
 			+e.container.container
 				+e.title.title-md
-					h2
+					h2 Среди наших клиентов
+
+				+e.slider
+					-
+						clientsList = [
+						'baby-club',
+						'bg-company',
+						'dom-cvetov',
+						'alp',
+						'suvenir',
+						'samtu',
+						'avtolit',
+						'bel-okna',
+						'el-company',
+						'geran',
+						'grand-est',
+						'klumba',
+						'nit-auto',
+						'optipart',
+						'polyglot',
+						'stalinvest',
+						'vizit'
+						]
+
+					for clientsImg in clientsList
+						+e.slider-item
+							+e.slider-logo(style=`background-image: url(static/img/content/clients/${clientsImg}.jpg)`)
 		//end clients
 
 		//begin out-thanks
@@ -288,6 +314,46 @@ block main
 					-thanksList = [1, 2, 3]
 
 					for item, i in thanksList
-						a(href=`static/img/content/thanks_${i + 1}-lg.jpg` data-fancybox='thanks')
-							img(src=`static/img/content/thanks_${i + 1}-sm.jpg` alt='image')
+						a(href=`static/img/content/docs/thanks_${i + 1}-lg.jpg` data-fancybox='thanks')
+							img(src=`static/img/content/docs/thanks_${i + 1}-sm.jpg` alt='image')
 		//end out-thanks
+
+		//begin calc
+		+b.SECTION.calc.has-bg(style='background-image: url(static/img/bg/calc_bg.jpg)')
+			+e.container.container
+				+e.title.title-md
+					h2 Рассчитайте стоимость продвижения
+						span за 30 минут
+
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-row
+						+e.form-fields
+							+e.form-group.form-group
+								+e.INPUT.form-control.form-control(type='text' placeholder='Введите адрес сайта' name='' required)
+
+							+e.form-group.form-group
+								+e.INPUT.form-control.form-control(type='email' placeholder='Ваша электронная почта' name='' required)
+						+e.form-actions
+							+e.form-range
+								+b.INPUT.js-input-range(type='text' name='' required data-range-min='1' data-range-max='100' data-range-default='50')
+							p Сколько обращений от новых клиентов в день вы хотели бы от сайта
+
+					+e.INPUT.form-submit.btn._yellow._md(type='submit' value='Узнать стоимость в течение 30 минут')
+		//end calc
+
+		//begin get-answers
+		+b.SECTION.get-answers(style='background-image: url(static/img/bg/get-answers_bg.png)')
+			+e.container.container
+				+e.inner
+					+e.title.title-md
+						h2
+							span Максимальное погружение
+							= ' '
+							| в проект
+					+e.descr
+						p Перед стартом работ мы обсуждаем с вами
+							span более 190 вопросов
+							| , специально подготовленных для вашей ниши.
+
+					+e.A.btn.btn._yellow._md(href='#!') Получить вопросы на почту
+		//end get-answers

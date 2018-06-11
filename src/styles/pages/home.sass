@@ -245,9 +245,33 @@
          margin-top: 15px
 // end scheme //
 
+// *** begin clients *** //
+.clients
+   padding: 50px 0
+   &__title
+      margin-bottom: 40px
+   &__slider
+      display: none
+      &.slick-initialized
+         display: block
+      &-item
+         margin: 0 15px
+      &-logo
+         height: 120px
+         background-repeat: no-repeat
+         background-size: contain
+         background-position: 50% 50%
+         filter: grayscale(100%)
+         transition: .5s ease
+         &:hover
+            filter: grayscale(0)
+   
+// end clients //
+
 // *** begin thanks *** //
 .out-thanks
    padding: 60px 0
+   background: #f3f3ed
    &__container
       max-width: 1000px
    &__title
@@ -272,4 +296,63 @@
             transition: .3s ease
             background: rgba($color2, .7)
             content: ''
+         &:nth-child(5) ~ a
+            margin-top: 30px
 // end thanks //
+
+// *** begin calc *** //
+.calc
+   padding: 60px 0
+   &::after
+      background: rgba(#000, .72)
+   &__container
+      max-width: 750px
+      text-align: center
+   &__title
+      margin: 0 auto 30px
+      color: #fff
+   &__form
+      &-row
+         display: flex
+         justify-content: space-between
+         margin-bottom: 30px
+         text-align: left
+      &-fields
+         flex: 0 0 320px
+      &-group
+         &:not(:last-child)
+            margin-bottom: 12px
+      &-control
+         background: rgba(#fff, .2)
+         +placeholder-color(#fff)
+      &-actions
+         flex: 0 0 370px
+         p
+            color: #fff
+      &-range
+         margin-bottom: 10px
+// end calc //
+
+// *** begin get-answers *** //
+.get-answers
+   padding: 100px 0
+   text-align: center
+   //background-size: 1242px 682px
+   background-size: contain
+   background-repeat: no-repeat
+   background-position: 50% 50%
+   &__container
+   &__inner
+      max-width: 600px
+      margin: 0 auto
+      color: #20262e
+      +f('lat300', 22, 30)
+   
+   &__title
+      margin-bottom: 55px
+   &__descr
+      margin-bottom: 60px
+      span
+         +f('lat700')
+
+// end get-answers //

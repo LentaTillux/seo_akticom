@@ -1,12 +1,10 @@
 import { TweenMax } from 'gsap';
 import {
-  $body,
 	$header,
-  $window,
   throttle,
   css,
-  Resp, $scrolledElements
-} from '../modules/dev/_helpers'
+  Resp,
+} from '../modules/dev/_helpers';
 
 class Header {
 	constructor() {

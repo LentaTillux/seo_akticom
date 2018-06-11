@@ -64,6 +64,8 @@ body
       min-width: 170px
       padding: 0 10px
       box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+   &_md
+      min-width: 358px
    &_lg
       min-width: 430px
       padding: 0 20px
@@ -96,9 +98,9 @@ body
          fill: #000
          +trs
       &_prev
-         left: 0
+         left: -30px
       &_next
-         right: 0
+         right: -30px
       
 .form-group
    &_tel
@@ -124,6 +126,7 @@ body
    +f('lat300', 16, 50)
    background: rgba(#fff, .5)
    box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+   color: #fff
    +placeholder-color(#000)
    
 .has-bg
