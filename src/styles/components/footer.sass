@@ -1,0 +1,55 @@
+.footer
+   background-color: #262032
+   p
+      font-size: 16px
+      color: #b7afc6
+   &__row
+      margin: 0 -30px
+   &__col
+      flex: 1 1 auto
+      padding: 40px 30px
+      &:not(:last-child)
+         border-right: 1px solid #453f51
+         
+   &__logo
+      margin-bottom: 30px
+   &__copyright
+      p
+         max-width: 220px
+         font-size: 18px
+         color: #5e586b
+   &__title
+      margin-bottom: 5px
+      +f('ban700')
+   
+      color: #fff
+      
+   &__link
+      color: $color1
+      
+   &__contact
+      &-item
+         &:not(:last-child)
+            margin-bottom: 15px
+         &_tel
+            display: flex
+            align-items: flex-start
+            flex-direction: column
+         &_address
+            max-width: 310px
+   
+      &-tel
+         margin-bottom: 5px
+         color: #fff
+         +f('ban700', 24, 24)
+         +trs
+         &:hover
+            color: $color1
+         
+   &__form
+      margin-top: 20px
+      &-group
+         margin-bottom: 15px
+      &-control
+         background: #332d3e
+         +placeholder-color(#fff)

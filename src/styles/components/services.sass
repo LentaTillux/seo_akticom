@@ -1,0 +1,65 @@
+// *** begin services *** //
+.services
+   &_default
+      padding: 50px 0
+   &_top
+      margin-top: -115px
+   &__row
+      flex-wrap: wrap
+   &__title
+      margin-bottom: 30px
+   &__item
+      $parent: &
+      position: relative
+      flex: 0 0 calc(33.33333% - 30px)
+      margin: 0 15px 30px
+      max-width: 370px
+      box-shadow: 0 24px 29px rgba(0, 0, 0, 0.13)
+      border-radius: 3px
+      background: #fff
+      cursor: default
+      +xs
+         cursor: pointer
+      &:hover #{$parent}-more
+         opacity: 1
+         transform: scale(1)
+      
+      &-title
+         display: flex
+         justify-content: center
+         align-items: center
+         min-height: 115px
+         padding: 10px 15px
+         border-bottom: 2px solid #e0e0d1
+         +f('ban700', 30, 35)
+         text-align: center
+      &-list
+         padding: 15px 20px
+         font-size: 18px
+         line-height: 25px
+         ul
+            li
+               &:not(:last-child)
+                  margin-bottom: 15px
+      &-more
+         +coverdiv
+         display: flex
+         flex-direction: column
+         justify-content: center
+         align-items: center
+         padding: 30px
+         opacity: 0
+         transform: scale(.8)
+         transition: .3s ease
+         text-align: center
+         background: rgba($color2 , .95)
+      &-price
+         margin-bottom: 25px
+         font-size: 30px
+         line-height: 35px
+         color: #fff
+         span
+            +f('ban700', 40, 40)
+      &-btn
+         min-width: 222px
+// end services //

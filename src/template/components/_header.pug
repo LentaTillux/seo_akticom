@@ -1,0 +1,24 @@
+//begin header
++b.HEADER.header(class= headerClass || '')
+	+e.container.container
+		+e.A.logo.logo(href='#!')
+			+e.IMG(src='static/img/other/logo.png' alt='image')
+
+		+e.NAV.nav
+			-
+				navList = [
+				'Почему МЫ',
+				'Наши решения',
+				'Специалисты',
+				'Схема работы',
+				'Калькулятор'
+				]
+
+			ul
+				for navText in navList
+					li: a(href='#!')= navText
+
+		+e.contact
+			+e.A.contact-tel(href='tel:88003338392') 8-800-333-83-92
+			+e.A.contact-link(href='#!') выберите регион
+//end header

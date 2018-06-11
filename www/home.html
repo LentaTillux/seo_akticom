@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#027d65">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.png">
+  </head>
+  <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M800.15 282.58v1.2a1.05 1.05 0 1 1-2.1 0v-1.2a1.05 1.05 0 1 1 2.1 0zm12.03 0v1.2a1.05 1.05 0 1 1-2.11 0v-1.2a1.05 1.05 0 1 1 2.1 0zm-2.8 8.06a6.7 6.7 0 0 1-4.27 1.45 6.7 6.7 0 0 1-4.28-1.45 1.06 1.06 0 0 1-.14-1.49 1.05 1.05 0 0 1 1.48-.14c.74.61 1.81.97 2.94.97 1.12 0 2.2-.36 2.94-.97.45-.37 1.11-.3 1.48.14.37.46.3 1.12-.14 1.5zM789.33 310h-2.1a5.86 5.86 0 0 1 3.68-5.47l8.34-3.35v-3.11c-4.65-2.11-7.99-6.66-8.38-12.02h-.19a3.47 3.47 0 0 1-1.05-6.78v-2.88h-8.57a1.05 1.05 0 0 1 0-2.11h8.61A14.32 14.32 0 0 1 803.91 261h2.4c7.88 0 14.28 6.43 14.28 14.34v3.93a3.48 3.48 0 0 1-1.05 6.78h-.19a14.36 14.36 0 0 1-8.38 12.02v3.11l8.34 3.35A5.86 5.86 0 0 1 823 310h-2.1c0-1.55-.93-2.93-2.37-3.5l-7.57-3.04a5.88 5.88 0 0 1-5.85 5.53 5.88 5.88 0 0 1-5.85-5.53l-7.58 3.03a3.76 3.76 0 0 0-2.36 3.5zm2.45-35.72h26.67a12.21 12.21 0 0 0-12.13-11.17h-2.4c-6.36 0-11.6 4.92-12.14 11.17zm24.3 2.11l.43 1.7c.15.6.69 1.02 1.31 1.02h.68v-2.72zm-24.34 2.72h.67c.63 0 1.17-.42 1.32-1.03l.42-1.69h-2.41zm17.14 19.72a14.22 14.22 0 0 1-7.52 0v4.28a3.77 3.77 0 0 0 3.76 3.77c2.07 0 3.76-1.7 3.76-3.77v-4.28zM817.3 285c0-.59.47-1.06 1.05-1.06h1.2a1.36 1.36 0 0 0 0-2.72h-1.73a3.46 3.46 0 0 1-3.35-2.63l-.55-2.2h-17.6l-.55 2.2a3.46 3.46 0 0 1-3.36 2.63h-1.73a1.36 1.36 0 0 0 0 2.72h1.2c.59 0 1.06.47 1.06 1.06 0 6.74 5.46 12.22 12.18 12.22 6.71 0 12.18-5.48 12.18-12.22z"
+          />
+        </defs>
+        <symbol id="icon-arr" viewBox="0 0 492 492">
+          <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"
+          />
+        </symbol>
+        <symbol id="icon-shape" viewBox="0 0 47 52">
+          <use xlink:href="#a" transform="translate(-778 -259)" />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!--begin header-->
+    <header class="header header_absolute">
+      <div class="header__container container">
+        <a class="header__logo logo" href="#!">
+          <img src="static/img/other/logo.png" alt="image" title="" />
+        </a>
+        <nav class="header__nav">
+          <ul>
+            <li>
+              <a href="#!">Почему МЫ</a>
+            </li>
+            <li>
+              <a href="#!">Наши решения</a>
+            </li>
+            <li>
+              <a href="#!">Специалисты</a>
+            </li>
+            <li>
+              <a href="#!">Схема работы</a>
+            </li>
+            <li>
+              <a href="#!">Калькулятор</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contact">
+          <a class="header__contact-tel" href="tel:88003338392">8-800-333-83-92</a>
+          <a class="header__contact-link" href="#!">выберите регион</a>
+        </div>
+      </div>
+    </header>
+    <!--end header-->
+    <!-- Main content-->
+    <main class="content">
+      <!--begin screen-->
+      <section class="screen" style="background-image: url(static/img/bg/screen_bg.jpg)">
+        <div class="screen__container container">
+          <div class="screen__inner">
+            <div class="screen__text">
+              <div class="screen__title">
+                <h1>Продающие сайты с гарантией результата</h1>
+              </div>
+              <div class="screen__sub-title title-lg">
+                <h2>Клиенты на 3-й день или вернем деньги.</h2>
+              </div>
+              <div class="screen__descr">
+                <p>Получите бесплатную консультацию сертифицированного специалиста</p>
+              </div>
+            </div>
+            <form class="screen__form" action="#!" method="POST">
+              <div class="screen__form-group form-group form-group_tel">
+                <span>+7</span>
+                <input class="form-control" type="text" placeholder="Введите номер телефона" name="tel" required="required" />
+              </div>
+              <input class="form-submit btn btn_yellow btn_xs" type="submit" value="Позвоните мне" />
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--end screen-->
+      <!--begin why-us-->
+      <section class="why-us">
+        <div class="why-us__container container">
+          <div class="why-us__title title-md">
+            <h2>Почему стоит
+              <span>работать именно с нами</span>
+            </h2>
+          </div>
+          <div class="why-us__row row">
+            <div class="why-us__item">
+              <div class="why-us__item-icon"></div>
+              <div class="why-us__item-title">
+                <h4>10 лет</h4>
+              </div>
+              <div class="why-us__item-descr">
+                <p>на рынке ИТ</p>
+              </div>
+            </div>
+            <div class="why-us__item">
+              <div class="why-us__item-icon"></div>
+              <div class="why-us__item-title">
+                <h4>32 специалиста</h4>
+              </div>
+              <div class="why-us__item-descr">
+                <p>в штате</p>
+              </div>
+            </div>
+            <div class="why-us__item">
+              <div class="why-us__item-icon"></div>
+              <div class="why-us__item-title">
+                <h4>150 проектов</h4>
+              </div>
+              <div class="why-us__item-descr">
+                <p>по всей РФ в работе</p>
+              </div>
+            </div>
+            <div class="why-us__item">
+              <div class="why-us__item-icon"></div>
+              <div class="why-us__item-title">
+                <h4>более 30 000 запросов</h4>
+              </div>
+              <div class="why-us__item-descr">
+                <p>наших клиентов держим в ТОПе</p>
+              </div>
+            </div>
+            <div class="why-us__item">
+              <div class="why-us__item-icon"></div>
+              <div class="why-us__item-title">
+                <h4>28% клиентов</h4>
+              </div>
+              <div class="why-us__item-descr">
+                <p>работают с нами более 5 лет</p>
+              </div>
+            </div>
+            <div class="why-us__item">
+              <div class="why-us__item-icon"></div>
+              <div class="why-us__item-title">
+                <h4>ТОП 5 среди seo-омпаний</h4>
+              </div>
+              <div class="why-us__item-descr">
+                <p>в Самарской области</p>
+              </div>
+            </div>
+          </div>
+          <a class="why-us__btn btn btn_yellow btn_lg" href="#!">Оставить заявку на расчет стоимости</a>
+        </div>
+      </section>
+      <!--end why-us-->
+      <!--begin issues-->
+      <section class="issues">
+        <div class="issues__container container">
+          <div class="issues__title title-md">
+            <h2>Ваша боль -
+              <span>наше решение</span>
+            </h2>
+          </div>
+          <div class="issues__block">
+            <div class="issues__item">
+              <div class="issues__count"></div>
+              <div class="issues__descr">
+                <p>У моего сайта много посетителей, а заявок нет</p>
+              </div>
+              <div class="issues__solution">
+                <p>
+                  <span>Максимальная конверсия</span> от сайта, которой нам удалось добиться - 48%. Мы прооптимизируем ваш сайт в рамках продвижения.</p>
+              </div>
+            </div>
+            <div class="issues__item">
+              <div class="issues__count"></div>
+              <div class="issues__descr">
+                <p>Сайт не приносит денег</p>
+              </div>
+              <div class="issues__solution">
+                <p>
+                  <span>87% наших проектов</span> приносят клиентов на 3-й день работы</p>
+              </div>
+            </div>
+            <div class="issues__item">
+              <div class="issues__count"></div>
+              <div class="issues__descr">
+                <p>Мои специалисты говорят, что что-то делают, а по факту на сайте ничего не меняется</p>
+              </div>
+              <div class="issues__solution">
+                <p>
+                  <span>Мы знаем свое дело на 5+</span> и видим издалека, над каким сайтом работают профессионалы, а над каким дилетанты. Но этого не видит наш клиент, поэтому ежемесячно мы отчитываемся о ходе работ, чтобы вы точно знали, что было сделанно
+                  в том или ином месяце.</p>
+              </div>
+            </div>
+            <div class="issues__item">
+              <div class="issues__count"></div>
+              <div class="issues__descr">
+                <p>Мой сайт вообще не ищется в поисковиках</p>
+              </div>
+              <div class="issues__solution">
+                <p>Cкорее всего
+                  <span>разработчики допустили распространенную ошибку</span> - закрыли и потом не открыли сайт в robots.txt</p>
+              </div>
+            </div>
+            <div class="issues__item">
+              <div class="issues__count"></div>
+              <div class="issues__descr">
+                <p>Наш сайт продвигают фрилансеры, чем вы лучше</p>
+              </div>
+              <div class="issues__solution">
+                <p>
+                  <span>Нас более 20 человек</span> и каждый обладает уникальными навыками по отношению к команде, вместе мы способны продвинуть любой ресурс, по одиночке - вряд ли.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end issues-->
+      <!--begin call-block-->
+      <section class="call-block has-bg" style="background-image: url(static/img/bg/call-block_bg.jpg)">
+        <div class="call-block__container container">
+          <form class="call-block__form" action="#!" method="POST">
+            <div class="call-block__form-group form-group">
+              <input class="call-block__form-control form-control" type="text" placeholder="Какая боль у Вас?" name="" required="required" />
+            </div>
+            <input class="form-submit btn btn_yellow btn_xs" type="submit" value="Перезвоните мне" />
+          </form>
+        </div>
+      </section>
+      <!--end call-block-->
+      <!--begin services-->
+      <section class="services services_default">
+        <div class="services__container container">
+          <div class="services__title title-md">
+            <h2>Услуги по
+              <span>продвижению сайтов</span>
+            </h2>
+          </div>
+          <div class="services__row row">
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Продвижение
+                  <br>по запросам</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Анализ текущих позиций сайта в поисковых системах</li>
+                  <li>- Подбор ключевых фраз</li>
+                  <li>- Оптимизация</li>
+                  <li>- Вывод сайта по выбранным запросам в топ</li>
+                  <li>- Удержание сайта на максимально эфективных позициях в GOOGLE и ЯНДЕКС</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Продвижение молодых сайтов</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Комплексное продвижение молодых сайтов</li>
+                  <li>- Анализ конкурентов и разработка  стратегий</li>
+                  <li>- Внутренняя работа с содержанием сайта</li>
+                  <li>- Использование “белых” способов оптимизации</li>
+                  <li>- Быстрый прирост трафика</li>
+                  <li>- Выгодная система оплаты</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Продвижение
+                  <br>в регионах</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Продвижение сайта одновременно в несколькох регионах</li>
+                  <li>- Охват крупных городов</li>
+                  <li>- Не требуется создание поддоменов</li>
+                  <li>- Не требуется открытие филиалов в других странах</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Продвижение
+                  <br>по трафику</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Проведение поискового аудита</li>
+                  <li>- Проверка юзабилити сайта, правильности индексации поисковиками</li>
+                  <li>- Подбор запросов</li>
+                  <li>- Работа с сайтами или доработка страниц</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>SEO-аудит и
+                  <br>разбор сайта</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Анализ эффективности продвижения и оптимизации сайта</li>
+                  <li>- Анализ корректности работы функционала и HTML </li>
+                  <li>- Планирование работ по seo</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Интернет-магазины</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Эффективные решения для привлечения новых клиентов</li>
+                  <li>- Комплексное продвижение</li>
+                  <li>- Работа с крупными и небольшими сайтами в сфере онлайн-торговли</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+          <!--end services-->
+        </div>
+      </section>
+      <!--begin promo-->
+      <section class="promo has-bg" style="background-image: url(static/img/bg/promo_bg.jpg)">
+        <div class="promo__container container">
+          <div class="promo__title title-lg">
+            <h2>ПРОДВИЖЕНИЕ ДЛЯ ЛЮБОГО РАЗМЕРА БИЗНЕСА</h2>
+          </div>
+          <div class="promo__row row">
+            <div class="promo__text">
+              <p>Мы помогаем компаниям любого размера в Google, будь то местный поиск или всероссийский. Каждая кампания по продвижению ориентирована на клиента и аудиторию и не имеет значения, новый у вас сайт или существующий.</p>
+              <p>Мы последовательно выполняем методики, чтобы обеспечить максимальную эффективность вашего сайта в поисковых системах Яндекс и Google. Наша работа затем отправляется вам по электронной почте со статистикой, связанной с производительностью.
+                Напишите нам сегодня по адресу
+                <a href="#!">sales@akticom.ru</a>
+              </p>
+            </div>
+            <div class="promo__img-wrap">
+              <div class="promo__img" style="background-image: url(static/img/content/mac.png)"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end promo-->
+      <!--begin services-->
+      <section class="services services_top">
+        <div class="services__container container">
+          <div class="services__row row">
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Тех.поддержка
+                  <br>сайтов</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Контроль работы и оплаты домена и хостинга</li>
+                  <li>- Устранение ошибок, вирусов, неполадок</li>
+                  <li>- Рекомендации по повышению эффективности работы сайта</li>
+                  <li>- Отслеживание неработающих элементов </li>
+                  <li>- Внедрение новых функций, наполнение страниц информацией</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>SMM
+                  <br>продвижение</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Тысячи &quot;живых&quot; подписчиков </li>
+                  <li>- Увеличение социального отклика</li>
+                  <li>- Высокая конверсия в покупку</li>
+                  <li>- Работа с лидерами мнений</li>
+                  <li>- Первые ощутимые результаты уже через 30 дней</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Копирайтинг</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Увеличение конверсии за счёт продающего описания товара </li>
+                  <li>- Качественный и уникальный seo-копирайтинг, легко воспринимающийся читателями и удовлетворяющий роботов</li>
+                  <li>- Наличие необходимых ключевых фраз при сохранении естественности и лёгкости слога </li>
+                  <li>- Привлечение потенциальных клиентов, которые случайно попали на сайт</li>
+                  <li>- Создание доверительного отношения и убеждение в эксперности</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>e-mail
+                  <br>маркетинг</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- эффективность общения компании с клиентом посредством email - рассылок</li>
+                  <li>- Увеличение количества повторных продаж и допродаж (upsell)</li>
+                  <li>- Напоминание клиентам о недавно просмотренных товарах</li>
+                  <li>- Информирование о новых поступлениях, акциях и новостях</li>
+                  <li>- Предложение персональных скидок</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Контекстая
+                  <br>реклама</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Мощные инструменты контекстной рекламы Яндекс.Директ + Google Adwords+«Бегун»</li>
+                  <li>- Ростт продаж уже спустя два-три дня</li>
+                  <li>- Быстрая и своевременная корректировка вашей рекламной кампании </li>
+                  <li>- Достижение максимального эффекта в комплексе с SEO</li>
+                  <li>- Анлитика стоимости вложений</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="services__item" onclick="">
+              <div class="services__item-title">
+                <h3>Управление
+                  <br>репутацией бренда</h3>
+              </div>
+              <div class="services__item-list">
+                <ul>
+                  <li>- Повышение лояльности клиентов</li>
+                  <li>- Помощь репутации вашего бренда</li>
+                  <li>- Донесение до конечного пользователя ключевой идеи вашего бизнеса</li>
+                  <li>- Работа с отзывами или отработка имеющегося негатива</li>
+                  <li>- формирование положительного имиджа бренда</li>
+                  <li>- Привлечение лидеров мнений</li>
+                </ul>
+              </div>
+              <div class="services__item-more">
+                <div class="services__item-price">
+                  <h4>От
+                    <span>5 000</span> руб</h4>
+                </div>
+                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+          <!--end services-->
+        </div>
+      </section>
+      <!--begin team-->
+      <section class="team has-bg" style="background-image: url(static/img/bg/team_bg.jpg)">
+        <div class="team__container container">
+          <div class="team__title title-md">
+            <h2>В нашей команде выходцы
+              <span>ТОП10 SEO-компаний</span> страны</h2>
+          </div>
+          <div class="team__descr">
+            <p>Наша команда имеет многолетний опыт работы с компаниями всех размеров и специальные знания о том, как развивать бизнес в Интернете. Мы рассматриваем SEO как ключевой инструмент ИТ-маркетинга, и если он будет работать хорошо, будет достигнута
+              высокая отдача от инвестиций копании.</p>
+            <p>У каждой компании, с которой мы работаем есть разные бизнес-цели, и мы предлагаем стратегию для их достижения, выслушивая все пожелания клиентов.</p>
+            <div class="team__contact">
+              <p>Позвоните сегодня по телефону
+                <a href="tel:+74996494885">+7 (499) 649-48-85</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end team-->
+      <!--begin scheme-->
+      <section class="scheme has-bg" style="background-image: url(static/img/bg/scheme_bg.jpg)">
+        <div class="scheme__container container">
+          <div class="scheme__title title-md">
+            <h2>Схема работы с нами</h2>
+          </div>
+          <div class="scheme__block">
+            <div class="scheme__item scheme__item_right">
+              <div class="scheme__item-count"></div>
+              <div class="scheme__item-content">
+                <div class="scheme__item-text">
+                  <p>Получаем вашу заявку</p>
+                </div>
+                <a class="scheme__item-btn btn btn_yellow btn_xs" href="#!">Оставить заявку</a>
+              </div>
+            </div>
+            <div class="scheme__item scheme__item_left">
+              <div class="scheme__item-count"></div>
+              <div class="scheme__item-content">
+                <div class="scheme__item-text">
+                  <span>Анализируем текущую ситуацию.</span>
+                  <p>Составляем медиа-план продвижение сайта.</p>
+                </div>
+              </div>
+            </div>
+            <div class="scheme__item scheme__item_right">
+              <div class="scheme__item-count"></div>
+              <div class="scheme__item-content">
+                <div class="scheme__item-text">
+                  <p>
+                    <span>Прописываем все условия</span> и план работы в Договоре, знакомим Вас с персональным менеджером и начинаем действовать!</p>
+                </div>
+              </div>
+            </div>
+            <div class="scheme__item scheme__item_left">
+              <div class="scheme__item-count"></div>
+              <div class="scheme__item-content">
+                <div class="scheme__item-text">
+                  <p>Вы получаете первые звонки и обращения уже на
+                    <span>2-й день</span> после начала работ!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end scheme-->
+      <!--begin clients-->
+      <section class="clients">
+        <div class="clients__container container">
+          <div class="clients__title title-md">
+            <h2></h2>
+          </div>
+        </div>
+      </section>
+      <!--end clients-->
+      <!--begin out-thanks-->
+      <section class="out-thanks">
+        <div class="out-thanks__container container">
+          <div class="out-thanks__title title-md">
+            <h2>Нас благодарят</h2>
+          </div>
+          <div class="out-thanks__photos-row row">
+            <a href="static/img/content/thanks_1-lg.jpg" data-fancybox="thanks">
+              <img src="static/img/content/thanks_1-sm.jpg" alt="image">
+            </a>
+            <a href="static/img/content/thanks_2-lg.jpg" data-fancybox="thanks">
+              <img src="static/img/content/thanks_2-sm.jpg" alt="image">
+            </a>
+            <a href="static/img/content/thanks_3-lg.jpg" data-fancybox="thanks">
+              <img src="static/img/content/thanks_3-sm.jpg" alt="image">
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--end out-thanks-->
+    </main>
+    <!--begin footer-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__row row">
+          <div class="footer__col">
+            <a class="footer__logo logo" href="#!">
+              <img src="static/img/other/logo.png" alt="image" title="" />
+            </a>
+            <div class="footer__copyright">
+              <p>© 2008-2015 | Актиком - Создание и продвижение сайтов в Самаре</p>
+            </div>
+          </div>
+          <div class="footer__col footer__contact">
+            <div class="footer__contact-item footer__contact-item_tel">
+              <a class="footer__contact-tel" href="tel:88003338392">8-800-333-83-92</a>
+              <a class="footer__link link-decor" href="#!">
+                <span>Заказать звонок</span>
+              </a>
+            </div>
+            <div class="footer__contact-item footer__contact-item_address">
+              <div class="footer__title">
+                <h4>Наш офис:</h4>
+              </div>
+              <p>443041, Самара, Ленинская, 168, оф. 446, 4 этаж, правое крыло</p>
+            </div>
+            <a class="footer__link link-decor" href="#!">
+              <span>Задать вопрос менеджеру Akticom</span>
+            </a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">
+              <h4>E-mail рассылка</h4>
+            </div>
+            <p>Опыт, идеи, новости, обратная связь</p>
+            <form class="footer__form" action="#!" method="POST">
+              <div class="footer__form-group form-group">
+                <input class="footer__form-control form-control" type="email" placeholder="Ваш e-mail адрес" name="email" required="required" />
+              </div>
+              <input class="form-submit btn btn_yellow btn_xs" type="submit" value="Подписаться" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
+    <!-- Scripts-->
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>

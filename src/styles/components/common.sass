@@ -1,0 +1,147 @@
+// basic styles
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('ban300', 18, 22)
+   color: #000
+   &.is-locked
+      overflow: hidden
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 100%
+
+.container
+   position: relative
+   max-width: 1200px
+   padding: 0 15px
+   margin: 0 auto
+
+.row
+   display: flex
+   margin: 0 -15px
+
+.content
+   overflow: hidden
+
+.link-decor
+   span
+      color: currentColor
+      border-bottom: 1px dashed currentColor
+      +trs
+   &:hover span
+      border-bottom-color: transparent
+
+.title-md
+   +f('ban300', 45, 58)
+   text-align: center
+   span
+      +f('ban700')
+
+.title-lg
+   text-align: center
+   +f('ban700', 45, 50)
+
+.btn
+   display: inline-block
+   height: 50px
+   text-align: center
+   cursor: pointer
+   color: #363531
+   +f('lat400', 16, 50)
+   transition: .3s ease
+   border-radius: 50px !important
+   outline: 0
+   border: 0
+   &_yellow
+      background: $color1
+      &:hover
+         background: #ffb500
+         box-shadow: none
+   &_xs
+      min-width: 170px
+      padding: 0 10px
+      box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+   &_lg
+      min-width: 430px
+      padding: 0 20px
+      box-shadow: 0 11px 27px rgba(30, 30, 30, 0.13)
+
+.slider
+   display: none
+   &.slick-initialized
+      display: block
+   
+   &__btn
+      position: absolute
+      top: 50%
+      z-index: 1
+      margin-top: -20px
+      outline: 0
+      border: 0
+      padding: 0
+      .no-touch &:hover svg
+         fill: $color1
+      &.slick-disabled
+         svg
+            fill: #c5c5c5
+         .no-touch &:hover svg
+            fill: #c5c5c5
+      
+      svg
+         width: 21px
+         height: 40px
+         fill: #000
+         +trs
+      &_prev
+         left: 0
+      &_next
+         right: 0
+      
+.form-group
+   &_tel
+      position: relative
+      min-width: 470px
+      span
+         position: absolute
+         top: 0
+         left: 20px
+         bottom: 0
+         color: #000
+         line-height: 50px
+      .form-control
+         padding: 0 20px 0 60px
+   
+.form-control
+   width: 100%
+   height: 50px
+   padding: 0 20px
+   border-radius: 50px!important
+   outline: 0
+   border: 0
+   +f('lat300', 16, 50)
+   background: rgba(#fff, .5)
+   box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+   +placeholder-color(#000)
+   
+.has-bg
+   position: relative
+   +cover
+   &::after
+      +coverdiv
+      background: rgba($color2, .9)
+      pointer-events: none
+      content: ''
+      
+   .container
+      position: relative
+      z-index: 1
+      
+.logo
+   display: block
+   flex: 0 0 171px
+   width: 171px
+   height: 61px
+   +cover-img

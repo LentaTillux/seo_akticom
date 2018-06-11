@@ -1,0 +1,31 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+e.row.row
+			+e.col
+				+e.A.logo.logo(href='#!')
+					+e.IMG(src='static/img/other/logo.png' alt='image')
+				+e.copyright
+					p © 2008-2015 | Актиком - Создание и продвижение сайтов в Самаре
+			+e.col.footer__contact
+				+e.contact-item._tel
+					+e.A.contact-tel(href='tel:88003338392') 8-800-333-83-92
+					+e.A.link.link-decor(href='#!')
+						span Заказать звонок
+				+e.contact-item._address
+					+e.title
+						h4 Наш офис:
+					p 443041, Самара, Ленинская, 168, оф. 446, 4 этаж, правое крыло
+				+e.A.link.link-decor(href='#!')
+					span Задать вопрос менеджеру Akticom
+			+e.col
+				+e.title
+					h4 E-mail рассылка
+				p Опыт, идеи, новости, обратная связь
+
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-group.form-group
+						+e.INPUT.form-control.form-control(type='email' placeholder='Ваш e-mail адрес' name='email' required)
+					+b.INPUT.form-submit.btn._yellow._xs(type='submit' value='Подписаться')
+
+//end footer
