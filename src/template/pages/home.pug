@@ -735,8 +735,8 @@ block main
 							+e.slider-logo(style=`background-image: url(static/img/content/clients/${clientsImg}.jpg)`)
 		//end clients
 
-		//begin out-thanks
-		+b.SECTION.out-thanks
+		//begin our-thanks
+		+b.SECTION.our-thanks
 			+e.container.container
 				+e.title.title-md
 					h2 Нас благодарят
@@ -746,7 +746,7 @@ block main
 					for item, i in thanksList
 						a(href=`static/img/content/docs/thanks_${i + 1}-lg.jpg` data-fancybox='thanks')
 							img(src=`static/img/content/docs/thanks_${i + 1}-sm.jpg` alt='image')
-		//end out-thanks
+		//end our-thanks
 
 		//begin calc
 		+b.SECTION.calc.has-bg(style='background-image: url(static/img/bg/calc_bg.jpg)')

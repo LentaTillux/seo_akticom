@@ -45,13 +45,33 @@
 .why-us
    padding: 90px 0 70px
    text-align: center
+   +xs
+      padding: 50px 0 40px
    &__title
       margin-bottom: 80px
+      +md
+         max-width: 680px
+         margin: 0 auto 60px
+      +xs
+         margin: 0 auto 30px
    &__row
       margin: 0 -15px 70px
+      +md
+         flex-wrap: wrap
+         justify-content: center
+         
    &__item
       flex: 0 0 (100% / 6)
       padding: 0 15px
+      +md
+         flex: 0 0 33.33333%
+      +xs
+         flex: 0 1 100%
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 30px
+      &:nth-child(3) ~ &
+         margin-top: 30px
       &-icon
          background-image: url(../img/sprites/why-us_spr.png)
          background-repeat: no-repeat
@@ -105,19 +125,30 @@
 .issues
    padding: 50px 0 90px
    counter-reset: issuesCount
+   border-top: 1px solid #f4f3e7
    &__title
       margin-bottom: 40px
       
    &__block
       padding-left: 100px
-   
+      +md
+         padding-left: 0
+         
    &__item
       display: flex
       align-items: center
       +f('ban300', 20, 26)
       counter-increment: issuesCount
+      +md
+         max-width: 690px
+         margin: 0 auto
+         flex-direction: column
+         text-align: center
+         
       &:not(:last-child)
          margin-bottom: 15px
+         +md
+            margin-bottom: 30px
    &__count
       flex: 0 0 70px
       width: 70px
@@ -128,14 +159,23 @@
       line-height: 70px
       color: #d6d6d6
       border: 3px solid #ebebeb
+      +md
+         margin: 0 0 10px
       &::after
          content: counter(issuesCount)
    &__descr
       flex: 0 0 280px
+      +md
+         flex: 0 1 auto
+         margin-bottom: 15px
+         +f('ban700')
+   
    &__solution
       position: relative
       flex: 1 1 auto
       padding-left: 120px
+      +md
+         padding-left: 0
       &::before
          position: absolute
          top: 50%
@@ -144,6 +184,11 @@
          height: 1px
          background-color: #828282
          content: ''
+         +md
+            top: -6px
+            left: 50%
+            width: 100px
+            margin-left: -50px
       span
          +f('ban700')
          color: #0fab6b
@@ -179,20 +224,31 @@
    &__main-title
       margin-bottom: 45px
       text-align: left
+      +md
+         margin-bottom: 20px
    &__slider
       padding-bottom: 50px
       border-bottom: 2px solid rgba(255, 255, 255, 0.25)
+      +md
+         padding-bottom: 20px
       .slick-list
          margin: 0 -15px
       .slider__btn
+         +md
+            top: 10px
+         
          svg
             fill: $color1
          &:hover svg
             fill: #ff7f00
          &_prev
             left: -50px
+            +md
+               left: 0
          &_next
             right: -50px
+            +md
+               right: 0
    &__item
       padding: 0 15px
       &-inner
@@ -201,14 +257,25 @@
       &-col
          float: left
          padding: 0 15px
+         +md
+            float: none
          &:nth-child(1)
             width: percentage(800/1200)
+            +md
+               margin-bottom: 30px
+               width: 100%
+               .cases__item-top
+                  padding: 0 40px 15px
          &:nth-child(2)
             width: percentage(400/1200)
+            +md
+               width: 100%
       &-top
          border-bottom: 2px solid rgba(#fff, .25)
          padding-bottom: 26px
-         
+         +xs
+            padding-bottom: 15px
+   
    &__info
       +clr
       &-col
@@ -305,6 +372,8 @@
 .promo
    padding: 65px 0 215px
    color: #fff
+   +md
+      padding: 65px 0 165px
    &::after
       background: rgba(#2e0f31, .9)
    &__container
@@ -312,20 +381,30 @@
       margin-bottom: 45px
    &__row
       margin: 0
+      +md
+         flex-direction: column
    &__text
       flex: 0 0 610px
       margin-right: 50px
+      +md
+         flex: 0 1 auto
+         margin-right: 0
       p
          +f('lat300', 22, 35)
          &:not(:last-child)
             margin-bottom: 37px
-   
+      
    &__img
       +ratio(506, 400)
       +cover
       &-wrap
          flex: 0 1 506px
          margin-top: 10px
+         +md
+            order: -1
+            flex: 0 1 auto
+            width: 370px
+            margin: 0 auto 30px
 // end promo //
 
 // *** begin team *** //
@@ -359,6 +438,8 @@
    padding: 100px 0 190px
    color: #fff
    counter-reset: schemeCount
+   +md
+      padding: 90px 0
    &::after
       background: rgba(#000, .72)
       content: ''
@@ -374,12 +455,17 @@
       align-items: center
       width: 53%
       counter-increment: schemeCount
+      +md
+         width: 100%
       &:not(:last-child)
          margin-bottom: 50px
       &_left
          align-self: flex-start
          justify-content: flex-end
          text-align: right
+         +md
+            justify-content: flex-start
+            text-align: left
       &_right
          align-self: flex-end
       
@@ -397,10 +483,12 @@
          &::after
             content: counter(schemeCount)
          #{$parent}_left &
-             order: 1
-            
+            order: 1
+            +md
+               order: 0
       &-content
          position: relative
+         width: 100%
          &::before
             position: absolute
             top: 50%
@@ -410,12 +498,22 @@
             content: ''
          #{$parent}_left &
             padding-right: 145px
+            +md
+               padding-right: 0
+               padding-left: 120px
             &::before
                right: 45px
+               +md
+                  right: auto
+                  left: 25px
          #{$parent}_right &
             padding-left: 145px
+            +md
+               padding-left: 120px
             &::before
                left: 45px
+               +md
+                  left: 25px
       &-text
          font-size: 23px
          line-height: 30px
@@ -433,6 +531,8 @@
       margin-bottom: 40px
    &__slider
       display: none
+      +md
+         padding: 0 30px
       &.slick-initialized
          display: block
       &-item
@@ -450,7 +550,7 @@
 // end clients //
 
 // *** begin thanks *** //
-.out-thanks
+.our-thanks
    padding: 75px 0 105px
    background: #f3f3ed
    &__container
@@ -462,7 +562,7 @@
       flex-wrap: wrap
       > a
          position: relative
-         flex: 0 0 calc(20% - 30px)
+         flex: 0 0 170px
          margin: 0 15px
          height: 240px
          box-shadow: 0 11px 27px rgba(30, 30, 30, 0.26)

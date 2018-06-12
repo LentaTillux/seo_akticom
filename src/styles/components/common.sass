@@ -46,11 +46,10 @@ body
 
 .btn
    display: inline-block
-   height: 50px
    text-align: center
    cursor: pointer
    color: #363531
-   +f('lat400', 16, 50)
+   +f('lat400', 16, 16)
    transition: .3s ease
    border-radius: 50px !important
    outline: 0
@@ -62,14 +61,20 @@ body
          box-shadow: none
    &_xs
       min-width: 170px
-      padding: 0 10px
+      padding: 17px 10px
       box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+      +xs
+         min-width: 0
    &_md
       min-width: 358px
+      padding: 17px 15px
+      box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
    &_lg
       min-width: 430px
-      padding: 0 20px
+      padding: 17px 20px
       box-shadow: 0 11px 27px rgba(30, 30, 30, 0.13)
+      +xs
+         min-width: 0
 
 .slider
    display: none
@@ -101,8 +106,12 @@ body
          +trs
       &_prev
          left: -30px
+         +md
+            left: 0
       &_next
          right: -30px
+         +md
+            right: 0
       
 .form-group
    &_tel

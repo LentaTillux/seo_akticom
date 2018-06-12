@@ -26264,7 +26264,7 @@ module.exports = fix;
 /* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26274,70 +26274,84 @@ __webpack_require__(336);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Sliders = function () {
-    function Sliders() {
-        _classCallCheck(this, Sliders);
+  function Sliders() {
+    _classCallCheck(this, Sliders);
 
-        this.$slider = $('.slider');
-        this.$clientsSld = $('.clients__slider');
-        this.$mobSlider = $('.mob-slider');
+    this.$slider = $('.slider');
+    this.$clientsSld = $('.clients__slider');
+    this.$mobSlider = $('.mob-slider');
 
-        var arrLeft = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="43" viewBox="0 0 25 43">\n    <defs>\n        <path id="i6tca"\n              d="M196.72 2737l17.95-18.07c.44-.44.44-1.15 0-1.6a1.12 1.12 0 0 0-1.6 0l-18.74 18.87a1.13 1.13 0 0 0 0 1.6l18.75 18.86a1.1 1.1 0 0 0 1.58 0c.44-.44.44-1.15 0-1.6z"/>\n    </defs>\n    <g>\n        <g transform="translate(-192 -2715)">\n            <use xlink:href="#i6tca"/>\n        </g>\n    </g>\n</svg>';
-        var arrRight = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="43" viewBox="0 0 25 43">\n        <defs>\n            <path id="vmhva"\n                  d="M1403.28 2737l-17.92-18.07a1.13 1.13 0 0 1 0-1.6 1.11 1.11 0 0 1 1.59 0l18.72 18.87c.44.45.44 1.16 0 1.6l-18.72 18.86a1.1 1.1 0 0 1-1.58 0 1.13 1.13 0 0 1 0-1.6z"/>\n        </defs>\n        <g>\n            <g transform="translate(-1383 -2715)">\n                <use xlink:href="#vmhva"/>\n            </g>\n        </g>\n    </svg>';
+    var arrLeft = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="43" viewBox="0 0 25 43">\n    <defs>\n        <path id="i6tca"\n              d="M196.72 2737l17.95-18.07c.44-.44.44-1.15 0-1.6a1.12 1.12 0 0 0-1.6 0l-18.74 18.87a1.13 1.13 0 0 0 0 1.6l18.75 18.86a1.1 1.1 0 0 0 1.58 0c.44-.44.44-1.15 0-1.6z"/>\n    </defs>\n    <g>\n        <g transform="translate(-192 -2715)">\n            <use xlink:href="#i6tca"/>\n        </g>\n    </g>\n</svg>';
+    var arrRight = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="43" viewBox="0 0 25 43">\n        <defs>\n            <path id="vmhva"\n                  d="M1403.28 2737l-17.92-18.07a1.13 1.13 0 0 1 0-1.6 1.11 1.11 0 0 1 1.59 0l18.72 18.87c.44.45.44 1.16 0 1.6l-18.72 18.86a1.1 1.1 0 0 1-1.58 0 1.13 1.13 0 0 1 0-1.6z"/>\n        </defs>\n        <g>\n            <g transform="translate(-1383 -2715)">\n                <use xlink:href="#vmhva"/>\n            </g>\n        </g>\n    </svg>';
 
-        this.defaultSlickOpts = {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            infinite: true,
-            arrows: true,
-            prevArrow: '<button type="button" class="slider__btn slider__btn_prev">' + arrLeft + '</button>',
-            nextArrow: '<button type="button" class="slider__btn slider__btn_next">' + arrRight + '</button>',
-            speed: 800,
-            useTransform: true,
-            adaptiveHeight: false,
-            accessibility: false,
-            swipe: true,
-            rows: 0
-        };
+    this.defaultSlickOpts = {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      infinite: true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slider__btn slider__btn_prev">' + arrLeft + '</button>',
+      nextArrow: '<button type="button" class="slider__btn slider__btn_next">' + arrRight + '</button>',
+      speed: 800,
+      useTransform: true,
+      adaptiveHeight: false,
+      accessibility: false,
+      swipe: true,
+      rows: 0
+    };
 
-        this.init();
+    this.init();
+  }
+
+  _createClass(Sliders, [{
+    key: 'init',
+    value: function init() {
+      if (this.$slider.length) this.createSlider();
+      if (this.$clientsSld.length) this.clientsSlider();
     }
+  }, {
+    key: 'createSlider',
+    value: function createSlider() {
+      var _this = this;
 
-    _createClass(Sliders, [{
-        key: 'init',
-        value: function init() {
-            if (this.$slider.length) this.createSlider();
-            if (this.$clientsSld.length) this.clientsSlider();
-        }
-    }, {
-        key: 'createSlider',
-        value: function createSlider() {
-            var _this = this;
+      this.$slider.each(function (i, slider) {
 
-            this.$slider.each(function (i, slider) {
+        $(slider).slick($.extend({}, _this.defaultSlickOpts, {
+          infinite: true
+        }));
+      });
+    }
+  }, {
+    key: 'clientsSlider',
+    value: function clientsSlider() {
+      var _this = this;
 
-                $(slider).slick($.extend({}, _this.defaultSlickOpts, {
-                    infinite: true
-                }));
-            });
-        }
-    }, {
-        key: 'clientsSlider',
-        value: function clientsSlider() {
-            var _this = this;
+      this.$clientsSld.each(function (i, slider) {
 
-            this.$clientsSld.each(function (i, slider) {
+        $(slider).slick($.extend({}, _this.defaultSlickOpts, {
+          infinite: true,
+          slidesToShow: 6,
+          slidesToScroll: 6,
+          responsive: [{
+            breakpoint: 1250,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          }, {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              rows: 2
+            }
+          }]
+        }));
+      });
+    }
+  }]);
 
-                $(slider).slick($.extend({}, _this.defaultSlickOpts, {
-                    infinite: true,
-                    slidesToShow: 6,
-                    slidesToScroll: 6
-                }));
-            });
-        }
-    }]);
-
-    return Sliders;
+  return Sliders;
 }();
 
 exports.default = new Sliders();

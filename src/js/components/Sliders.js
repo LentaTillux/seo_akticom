@@ -72,7 +72,22 @@ class Sliders {
       $(slider).slick($.extend({}, _this.defaultSlickOpts, {
         infinite: true,
         slidesToShow: 6,
-        slidesToScroll: 6
+        slidesToScroll: 6,
+        responsive: [
+          {
+            breakpoint: 1250,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            },
+          }, {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              rows: 2
+            },
+          }]
       }));
     });
   }
