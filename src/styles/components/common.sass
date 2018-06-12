@@ -37,13 +37,19 @@ body
 .title-md
    +f('ban300', 45, 58)
    text-align: center
+   +xs
+      font-size: 30px
+      line-height: 30px
    span
       +f('ban700')
 
 .title-lg
    text-align: center
    +f('ban700', 45, 50)
-
+   +xs
+      font-size: 30px
+      line-height: 35px
+   
 .btn
    display: inline-block
    text-align: center
@@ -65,10 +71,14 @@ body
       box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
       +xs
          min-width: 0
+         padding: 17px 30px
    &_md
       min-width: 358px
       padding: 17px 15px
       box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+      +xs
+         min-width: 0
+         margin: 0 -10px
    &_lg
       min-width: 430px
       padding: 17px 20px
@@ -117,6 +127,9 @@ body
    &_tel
       position: relative
       min-width: 470px
+      +xs
+         min-width: 0
+         width: 100%
       span
          position: absolute
          top: 0

@@ -3,15 +3,24 @@
    &_type-1
       padding: 50px 0 100px
       margin-top: -252px
+      +xs
+         padding: 50px 0
+         margin-top: 0
    &_type-2
       padding: 0 0 85px
       margin-top: -115px
+      +xs
+         padding: 50px 0
+         margin-top: 0
    &__row
       flex-wrap: wrap
       justify-content: center
    &__title
       margin-bottom: 30px
       color: #fff
+      +xs
+         margin-bottom: 15px
+         color: #000
    &__item
       $parent: &
       position: relative
@@ -52,6 +61,8 @@
          padding: 30px 30px 45px
          font-size: 18px
          line-height: 25px
+         +xs
+            padding: 20px 20px 25px
          ul
             li
                &:not(:last-child)

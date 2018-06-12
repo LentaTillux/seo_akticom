@@ -1,5 +1,7 @@
 .footer
    background-color: #262032
+   +xs
+      padding: 35px 0
    p
       font-size: 16px
       color: #b7afc6
@@ -13,6 +15,9 @@
       padding: 70px 30px 50px
       +md
          padding: 50px 30px
+      +xs
+         text-align: center
+         padding: 0 15px
       &:nth-child(1)
          flex: 0 1 300px
          +md
@@ -20,16 +25,26 @@
             align-items: center
             justify-content: space-between
             flex: 1 1 100%
+         +xs
+            flex: 1 1 auto
+            flex-direction: column
       &:nth-child(2)
          flex: 0 1 500px
          +md
             flex: 0 1 50%
+         +xs
+            flex: 1 1 auto
       &:nth-child(3)
          flex: 0 1 430px
          +md
             flex: 0 1 50%
+         +xs
+            flex: 1 1 auto
       &:not(:last-child)
          border-right: 1px solid #453f51
+         +xs
+            margin-bottom: 20px
+            border-right: 0
          
    &__logo
       margin-top: -15px
@@ -38,6 +53,9 @@
          flex: 0 0 140px
          margin: 0 30px 0 0
          height: auto
+      +xs
+         flex: 0 1 auto
+         margin: 0 0 5px
    &__copyright
       +md
          flex: 1 1 auto
@@ -66,8 +84,12 @@
             display: flex
             align-items: flex-start
             flex-direction: column
+            +xs
+               align-items: center
          &_address
             max-width: 310px
+            +xs
+               max-width: none
    
       &-tel
          margin-bottom: 5px

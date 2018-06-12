@@ -2,7 +2,8 @@
 .screen
    height: 100vh
    +cover
-   
+   +xs
+      padding-top: 80px
    &__container
       height: 100%
       display: flex
@@ -15,30 +16,46 @@
       
    &__text
       margin-bottom: 50px
-      
+      +md
+         margin-bottom: 30px
+   
    &__title
       margin-bottom: 50px
-      +f('ban300')
-      font-size: 58px
-      line-height: 28px
+      +f('ban300', 58)
+      line-height: 1
       text-align: left
+      +xs
+         margin-bottom: 20px
+         font-size: 28px
+      br
+         +xs
+            display: none
    &__sub-title
       max-width: 500px
       margin-bottom: 30px
       color: $color1
       text-align: left
+      +xs
+         margin-bottom: 15px
    &__descr
       max-width: 400px
       p
          +f('lat300')
          font-size: 22px
          line-height: 25px
+         +xs
+            font-size: 17px
+            line-height: 23px
          
    &__form
       display: flex
       align-items: center
+      +xs
+         flex-direction: column
       &-group
          margin-right: 30px
+         +xs
+            margin: 0 0 20px
 // end screen //
 
 // *** begin why-us *** //
@@ -59,7 +76,9 @@
       +md
          flex-wrap: wrap
          justify-content: center
-         
+      +xs
+         margin: 0 -15px 30px
+   
    &__item
       flex: 0 0 (100% / 6)
       padding: 0 15px
@@ -126,6 +145,8 @@
    padding: 50px 0 90px
    counter-reset: issuesCount
    border-top: 1px solid #f4f3e7
+   +xs
+      padding: 50px 0
    &__title
       margin-bottom: 40px
       
@@ -197,6 +218,8 @@
 // *** begin call-block *** //
 .call-block
    padding: 58px 0
+   +xs
+      padding: 50px 0
    &::after
       background: rgba(#7031ab, .95)
    &__container
@@ -205,8 +228,15 @@
    &__form
       display: flex
       justify-content: space-between
+      +xs
+         flex-direction: column
+         align-items: center
       &-group
          min-width: 470px
+         +xs
+            min-width: 0
+            width: 100%
+            margin-bottom: 20px
       &-control
          padding: 0 35px
          background: rgba(#fff, .15)
@@ -218,6 +248,8 @@
 .cases
    padding: 60px 0 230px
    color: #fff
+   +xs
+      padding: 50px 0
    &::after
       background: rgba(#2e0f31, .92)
       content: ''
@@ -231,6 +263,8 @@
       border-bottom: 2px solid rgba(255, 255, 255, 0.25)
       +md
          padding-bottom: 20px
+      +xs
+         border-bottom: 0
       .slick-list
          margin: 0 -15px
       .slider__btn
@@ -264,8 +298,13 @@
             +md
                margin-bottom: 30px
                width: 100%
-               .cases__item-top
-                  padding: 0 40px 15px
+            +xs
+               margin-bottom: 20px
+   
+            .cases__item-top
+               padding: 0 40px 15px
+               +xs
+                  padding: 0 30px 15px
          &:nth-child(2)
             width: percentage(400/1200)
             +md
@@ -280,14 +319,25 @@
       +clr
       &-col
          float: left
+         +xs
+            float: none
          &:nth-child(1)
             width: 160px
             text-align: center
+            +xs
+               margin: 0 auto 20px
          &:nth-child(2)
             width: calc(100% - 160px)
             padding-left: 30px
+            +xs
+               padding-left: 0
+               width: 100%
    &__title
       +f('ban700', 23, 23)
+      +xs
+         text-align: center
+         font-size: 20px
+         line-height: 20px
       
    &__logo
       height: 60px
@@ -325,6 +375,8 @@
       &-list
          margin-bottom: 30px
          +f('lat400', 16, 16)
+         +xs
+            margin-bottom: 20px
          ul
             li
                &:not(:last-child)
@@ -347,6 +399,8 @@
             li
                padding: 10px 25px 10px 0
                border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+               +xs
+                  padding: 10px 8px 10px 0
                span
                   float: right
                   
@@ -374,11 +428,15 @@
    color: #fff
    +md
       padding: 65px 0 165px
+   +xs
+      padding: 50px 0
+      
    &::after
       background: rgba(#2e0f31, .9)
-   &__container
    &__title
       margin-bottom: 45px
+      +xs
+         margin-bottom: 25px
    &__row
       margin: 0
       +md
@@ -391,8 +449,17 @@
          margin-right: 0
       p
          +f('lat300', 22, 35)
+         +xs
+            font-size: 18px
+            line-height: 25px
          &:not(:last-child)
             margin-bottom: 37px
+            +xs
+               margin-bottom: 20px
+      a
+         +trs
+         &:hover
+            color: $color1
       
    &__img
       +ratio(506, 400)
@@ -405,6 +472,8 @@
             flex: 0 1 auto
             width: 370px
             margin: 0 auto 30px
+         +xs
+            width: 100%
 // end promo //
 
 // *** begin team *** //
@@ -417,20 +486,28 @@
    &__title
       margin-bottom: 325px
       font-size: 40px
+      +xs
+         margin-bottom: 30px
       span
          font-size: 45px
+         +xs
+            font-size: 30px
    
    &__descr
       font-size: 22px
       line-height: 35px
-      
+      +xs
+         font-size: 18px
+         line-height: 28px
       p
          +f('lat300')
    &__contact
       margin-top: 35px
       text-align: center
-      > a
-         +f('ag400')
+      a
+         +f('lat700')
+         +xs
+            display: block
 // end team //
 
 // *** begin scheme *** //
@@ -440,12 +517,15 @@
    counter-reset: schemeCount
    +md
       padding: 90px 0
+   +xs
+      padding: 50px 0
    &::after
       background: rgba(#000, .72)
       content: ''
    &__title
       margin-bottom: 45px
-      
+      +xs
+         margin-bottom: 30px
    &__block
       display: flex
       flex-direction: column
@@ -457,6 +537,9 @@
       counter-increment: schemeCount
       +md
          width: 100%
+      +xs
+         flex-direction: column
+         text-align: center
       &:not(:last-child)
          margin-bottom: 50px
       &_left
@@ -480,6 +563,8 @@
          border-radius: 50%
          color: $color1
          +f('ban700', 27, 27)
+         +xs
+            margin: 0 0 15px
          &::after
             content: counter(schemeCount)
          #{$parent}_left &
@@ -496,11 +581,15 @@
             width: 70px
             background: rgba(#fff, .5)
             content: ''
+            +xs
+               display: none
          #{$parent}_left &
             padding-right: 145px
             +md
                padding-right: 0
                padding-left: 120px
+            +xs
+               padding-left: 0
             &::before
                right: 45px
                +md
@@ -510,6 +599,8 @@
             padding-left: 145px
             +md
                padding-left: 120px
+            +xs
+               padding-left: 0
             &::before
                left: 45px
                +md
@@ -517,6 +608,9 @@
       &-text
          font-size: 23px
          line-height: 30px
+         +xs
+            font-size: 19px
+            line-height: 25px
          span
             +f('ban700')
    
@@ -527,8 +621,12 @@
 // *** begin clients *** //
 .clients
    padding: 90px 0 45px
+   +xs
+      padding: 50px 0 40px
    &__title
       margin-bottom: 40px
+      +xs
+         margin-bottom: 20px
    &__slider
       display: none
       +md
@@ -551,8 +649,10 @@
 
 // *** begin thanks *** //
 .our-thanks
-   padding: 75px 0 105px
+   padding: 75px 0
    background: #f3f3ed
+   +xs
+      padding: 50px 0
    &__container
       max-width: 1000px
    &__title
@@ -563,7 +663,7 @@
       > a
          position: relative
          flex: 0 0 170px
-         margin: 0 15px
+         margin: 0 15px 30px
          height: 240px
          box-shadow: 0 11px 27px rgba(30, 30, 30, 0.26)
          +cover-img
@@ -577,13 +677,13 @@
             transition: .3s ease
             background: rgba($color2, .7)
             content: ''
-         &:nth-child(5) ~ a
-            margin-top: 30px
 // end thanks //
 
 // *** begin calc *** //
 .calc
    padding: 125px 0 100px
+   +xs
+      padding: 65px 0
    &::after
       background: rgba(#000, .72)
    &__container
@@ -598,8 +698,15 @@
          justify-content: space-between
          margin-bottom: 65px
          text-align: left
+         +xs
+            flex-direction: column
+            margin-bottom: 20px
+            
       &-fields
          flex: 0 0 320px
+         +xs
+            flex: 0 1 auto
+            margin-bottom: 30px
       &-group
          &:not(:last-child)
             margin-bottom: 12px
@@ -608,10 +715,15 @@
          +placeholder-color(#fff)
       &-actions
          flex: 0 0 370px
+         +xs
+            flex: 0 1 auto
          p
             color: #fff
+            +xs
+               text-align: center
       &-range
          margin-bottom: 10px
+         
 // end calc //
 
 // *** begin get-answers *** //
@@ -621,7 +733,9 @@
    background-size: contain
    background-repeat: no-repeat
    background-position: 50% 50%
-   &__container
+   +xs
+      padding: 60px 0
+      background-size: cover
    &__inner
       max-width: 660px
       margin: 0 auto
@@ -631,8 +745,14 @@
    &__title
       margin-bottom: 45px
       padding: 0 20px
+      +xs
+         margin-bottom: 20px
    &__descr
       margin-bottom: 55px
+      +xs
+         margin-bottom: 25px
+         font-size: 18px
+         line-height: 22px
       span
          +f('lat700')
 

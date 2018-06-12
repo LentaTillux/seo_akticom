@@ -59,7 +59,14 @@ class Sliders {
     this.$slider.each(function (i, slider) {
 
       $(slider).slick($.extend({}, _this.defaultSlickOpts, {
-        infinite: true
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              adaptiveHeight: true
+            },
+          }]
       }));
     });
   }
@@ -84,8 +91,7 @@ class Sliders {
             breakpoint: 767,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1,
-              rows: 2
+              slidesToScroll: 1
             },
           }]
       }));
