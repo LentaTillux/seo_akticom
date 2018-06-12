@@ -330,6 +330,8 @@
             width: calc(100% - 160px)
             padding-left: 30px
             +xs
+               display: flex
+               flex-direction: column
                padding-left: 0
                width: 100%
    &__title
@@ -408,11 +410,21 @@
       display: flex
       align-items: center
       margin-bottom: 20px
+      +xs
+         margin: 10px 0 0
+         order: 1
       &-title
          margin-right: 25px
       &-cities
          +f('lat400', 15, 20)
          color: #fff
+         +xs
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+         button
+            +xs
+               margin: 0 0 5px
       &_mod
          margin-bottom: 5px
          .cases__region-title
@@ -420,6 +432,9 @@
    &__tabs
       &-nav
          margin-bottom: 10px
+         +xs
+            order: 1
+            margin: 15px 0 10px
 // end cases //
 
 // *** begin promo *** //
