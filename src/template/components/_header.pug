@@ -13,12 +13,20 @@
 				'Схема работы',
 				'Калькулятор'
 				]
+			+e.nav-inner
+				ul
+					for navText in navList
+						li: a(href='#!')= navText
 
-			ul
-				for navText in navList
-					li: a(href='#!')= navText
+				+e.contact._nav
+					+e.A.contact-tel(href='tel:88003338392') 8-800-333-83-92
+					+e.A.contact-link(href='#!') выберите регион
 
 		+e.contact
 			+e.A.contact-tel(href='tel:88003338392') 8-800-333-83-92
 			+e.A.contact-link(href='#!') выберите регион
+
+		+e.BUTTON.nav-btn(type='button')
+			+e.nav-btn-burger
+				+e.nav-btn-lines
 //end header

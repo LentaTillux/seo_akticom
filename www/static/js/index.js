@@ -20820,9 +20820,6 @@ exports.Common = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-// import './Header';
-
-
 var _objectFitImages = __webpack_require__(332);
 
 var _objectFitImages2 = _interopRequireDefault(_objectFitImages);
@@ -20830,6 +20827,8 @@ var _objectFitImages2 = _interopRequireDefault(_objectFitImages);
 var _fancybox = __webpack_require__(333);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
+
+__webpack_require__(343);
 
 __webpack_require__(335);
 
@@ -32129,6 +32128,60 @@ function initTabs() {
     }).eq(0).addClass('is-active');
   });
 }
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46)))
+
+/***/ }),
+/* 343 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.HeaderAPI = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _helpers = __webpack_require__(91);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Header = function () {
+  function Header() {
+    _classCallCheck(this, Header);
+
+    this.$nav = $('.header__nav');
+    this.$navBtn = $('.header__nav-btn');
+
+    this.init();
+  }
+
+  _createClass(Header, [{
+    key: 'init',
+    value: function init() {
+
+      if (!_helpers.Resp.isDesk) {
+        this.toggleNav();
+      }
+    }
+  }, {
+    key: 'toggleNav',
+    value: function toggleNav() {
+      var _this = this;
+      this.$navBtn.on('click tap', function () {
+        $(this).toggleClass(_helpers.css.active);
+        _helpers.$body.toggleClass(_helpers.css.locked);
+        _this.$nav.slideToggle();
+      });
+    }
+  }]);
+
+  return Header;
+}();
+
+var HeaderAPI = exports.HeaderAPI = new Header();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46)))
 
 /***/ })

@@ -1,70 +1,30 @@
-import { TweenMax } from 'gsap';
 import {
-	$header,
-  throttle,
+  $body,
   css,
   Resp,
 } from '../modules/dev/_helpers';
 
 class Header {
-	constructor() {
-		this.$nav = $('.header__nav');
-		this.$navBtn = $('.nav-btn');
+  constructor () {
+    this.$nav = $('.header__nav');
+    this.$navBtn = $('.header__nav-btn');
 
-		this.init();
-	}
-
-	init() {
-		this.bindEvents();
-
-		if (!Resp.isDesk) {
-      this.toggleNav();
-    }
-	}
-
-	bindEvents() {
-    this.initFix();
-		this.show();
-
-    if (Resp.isMobiles) this.toggleDropDown();
-	}
-
-	show() {
-    TweenMax.to($header, .7, { y: 0, delay: .5, clearProps: 'all', onComplete: () => {
-		    $header.removeClass('no-transition');
-      } });
-	}
-
-	initFix() {
-		const toggleHeaderScroll = throttle(() => {
-			toggleHeader();
-		}, 0, this);
-
-		function toggleHeader() {
-      if (window.pageYOffset > 0) {
-				$header.addClass(css.fixed);
-			} else {
-				$header.removeClass(css.fixed);
-			}
-		}
-
-		window.addEventListener('scroll', toggleHeaderScroll);
-	}
-
-  toggleNav() {
-	  const _this = this;
-    this.$navBtn.on('click tap', function () {
-      $(this).toggleClass(css.active);
-      _this.$nav.slideToggle();
-    });
+    this.init();
   }
 
-  toggleDropDown() {
-    const $btn = this.$nav.find('.has-dropdown');
+  init () {
 
-    $btn.on('click tap', function(e) {
+    if (!Resp.isDesk) {
+      this.toggleNav();
+    }
+  }
 
-      $(this).next().slideToggle(0);
+  toggleNav () {
+    const _this = this;
+    this.$navBtn.on('click tap', function () {
+      $(this).toggleClass(css.active);
+      $body.toggleClass(css.locked);
+      _this.$nav.slideToggle();
     });
   }
 

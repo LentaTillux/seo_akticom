@@ -1,7 +1,7 @@
 import objectFitImages from 'object-fit-images';
 import fancybox from '@fancyapps/fancybox';
 
-// import './Header';
+import './Header';
 import './Sliders';
 import './RangeInput';
 import './tabs';
