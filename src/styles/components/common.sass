@@ -84,6 +84,8 @@ body
       outline: 0
       border: 0
       padding: 0
+      height: 40px
+      overflow: hidden
       .no-touch &:hover svg
          fill: $color1
       &.slick-disabled
@@ -109,7 +111,7 @@ body
       span
          position: absolute
          top: 0
-         left: 20px
+         left: 28px
          bottom: 0
          color: #000
          line-height: 50px
@@ -148,3 +150,19 @@ body
    width: 171px
    height: 61px
    +cover-img
+   
+.tabs
+   &__nav
+      button
+         +f('lat400', 15, 20)
+         color: #fff
+         outline: 0
+         padding: 0
+         border: 0
+         cursor: pointer
+         transition: .3s ease
+         &:not(:last-child)
+            margin-right: 15px
+         &.is-active
+            color: $color1
+            pointer-events: none

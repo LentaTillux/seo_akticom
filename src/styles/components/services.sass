@@ -1,18 +1,21 @@
 // *** begin services *** //
 .services
-   &_default
-      padding: 50px 0
-   &_top
+   &_type-1
+      padding: 50px 0 100px
+      margin-top: -250px
+   &_type-2
+      padding: 0 0 85px
       margin-top: -115px
    &__row
       flex-wrap: wrap
    &__title
       margin-bottom: 30px
+      color: #fff
    &__item
       $parent: &
       position: relative
       flex: 0 0 calc(33.33333% - 30px)
-      margin: 0 15px 30px
+      margin: 0 15px
       max-width: 370px
       box-shadow: 0 24px 29px rgba(0, 0, 0, 0.13)
       border-radius: 3px
@@ -23,6 +26,8 @@
       &:hover #{$parent}-more
          opacity: 1
          transform: scale(1)
+      &:nth-child(3) ~ &
+         margin-top: 30px
       
       &-title
          display: flex
@@ -34,13 +39,13 @@
          +f('ban700', 30, 35)
          text-align: center
       &-list
-         padding: 15px 20px
+         padding: 30px 30px 45px
          font-size: 18px
          line-height: 25px
          ul
             li
                &:not(:last-child)
-                  margin-bottom: 15px
+                  margin-bottom: 25px
       &-more
          +coverdiv
          display: flex

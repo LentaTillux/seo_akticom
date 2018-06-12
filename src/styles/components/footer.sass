@@ -7,30 +7,38 @@
       margin: 0 -30px
    &__col
       flex: 1 1 auto
-      padding: 40px 30px
+      padding: 70px 30px 50px
+      &:nth-child(1)
+         flex: 0 1 300px
+      &:nth-child(2)
+         flex: 0 1 500px
+      &:nth-child(3)
+         flex: 0 1 430px
       &:not(:last-child)
          border-right: 1px solid #453f51
          
    &__logo
-      margin-bottom: 30px
+      margin-top: -15px
+      margin-bottom: 60px
    &__copyright
       p
          max-width: 220px
          font-size: 18px
          color: #5e586b
    &__title
-      margin-bottom: 5px
+      margin-bottom: 10px
       +f('ban700')
    
       color: #fff
       
    &__link
+      font-size: 16px
       color: $color1
       
    &__contact
       &-item
          &:not(:last-child)
-            margin-bottom: 15px
+            margin-bottom: 25px
          &_tel
             display: flex
             align-items: flex-start
@@ -47,7 +55,7 @@
             color: $color1
          
    &__form
-      margin-top: 20px
+      margin-top: 24px
       &-group
          margin-bottom: 15px
       &-control

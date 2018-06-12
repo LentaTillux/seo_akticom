@@ -39,7 +39,7 @@ class Sliders {
       nextArrow: `<button type="button" class="slider__btn slider__btn_next">${arrRight}</button>`,
       speed: 800,
       useTransform: true,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       accessibility: false,
       swipe: true,
       rows: 0
@@ -54,11 +54,12 @@ class Sliders {
   }
 
   createSlider() {
+    const _this = this;
+
     this.$slider.each(function (i, slider) {
 
-      $(slider).slick($.extend({}, this.defaultSlickOpts, {
-        infinite: true,
-        arrows: true,
+      $(slider).slick($.extend({}, _this.defaultSlickOpts, {
+        infinite: true
       }));
     });
   }

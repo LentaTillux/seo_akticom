@@ -14,19 +14,21 @@
       color: #fff
       
    &__text
-      margin-bottom: 30px
+      margin-bottom: 50px
       
    &__title
-      margin-bottom: 10px
+      margin-bottom: 50px
       +f('ban300')
       font-size: 58px
-      line-height: 58px
+      line-height: 28px
       text-align: left
    &__sub-title
-      margin-bottom: 10px
+      max-width: 500px
+      margin-bottom: 30px
       color: $color1
       text-align: left
    &__descr
+      max-width: 400px
       p
          +f('lat300')
          font-size: 22px
@@ -41,19 +43,24 @@
 
 // *** begin why-us *** //
 .why-us
-   padding: 50px 0
+   padding: 90px 0 70px
    text-align: center
    &__title
-      margin-bottom: 30px
+      margin-bottom: 80px
    &__row
-      margin: 0 -15px 50px
+      margin: 0 -15px 70px
    &__item
       flex: 0 0 (100% / 6)
       padding: 0 15px
       &-icon
-         margin-bottom: 30px
+         background-image: url(../img/sprites/why-us_spr.png)
+         background-repeat: no-repeat
+         &-wrap
+            display: inline-block
+            margin-bottom: 13px
+            height: 95px
       &-title
-         margin-bottom: 5px
+         margin-bottom: 3px
          +f('ban700')
          font-size: 20px
          line-height: 22px
@@ -61,19 +68,53 @@
       &-descr
          +f('ban400')
          font-size: 16px
+         
+.icon-why-us_hand
+   width: 109px
+   height: 74px
+   background-position: -10px -10px
+
+.icon-why-us_light
+   width: 54px
+   height: 80px
+   background-position: -139px -10px
+
+.icon-why-us_monitor
+   width: 85px
+   height: 80px
+   background-position: -10px -110px
+
+.icon-why-us_plane
+   width: 86px
+   height: 78px
+   background-position: -115px -110px
+
+.icon-why-us_spec
+   width: 105px
+   height: 73px
+   background-position: -213px -10px
+
+.icon-why-us_star
+   width: 69px
+   height: 94px
+   background-position: -221px -103px
+         
 // end why-us //
 
 // *** begin issues *** //
 .issues
-   padding: 50px 0
+   padding: 50px 0 90px
    counter-reset: issuesCount
    &__title
-      margin-bottom: 30px
+      margin-bottom: 40px
+      
+   &__block
+      padding-left: 100px
    
    &__item
       display: flex
       align-items: center
-      +f('ban300', 23, 30)
+      +f('ban300', 20, 26)
       counter-increment: issuesCount
       &:not(:last-child)
          margin-bottom: 15px
@@ -83,19 +124,21 @@
       height: 70px
       margin-right: 30px
       text-align: center
+      +f('ban700', 27)
       line-height: 70px
+      color: #d6d6d6
       border: 3px solid #ebebeb
       &::after
          content: counter(issuesCount)
    &__descr
-      flex: 0 0 330px
+      flex: 0 0 280px
    &__solution
       position: relative
       flex: 1 1 auto
-      padding: 30px 0 0 110px
+      padding-left: 120px
       &::before
          position: absolute
-         top: 45px
+         top: 50%
          left: 20px
          width: 70px
          height: 1px
@@ -126,42 +169,174 @@
          +placeholder-color(#fff)
 // end call-block //
 
+// *** begin cases *** //
+.cases
+   padding: 60px 0 230px
+   color: #fff
+   &::after
+      background: rgba(#2e0f31, .92)
+      content: ''
+   &__main-title
+      margin-bottom: 45px
+      text-align: left
+   &__slider
+      padding-bottom: 50px
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25)
+      .slick-list
+         margin: 0 -15px
+      .slider__btn
+         svg
+            fill: $color1
+         &:hover svg
+            fill: #ff7f00
+         &_prev
+            left: -50px
+         &_next
+            right: -50px
+   &__item
+      padding: 0 15px
+      &-inner
+         margin: 0 -15px
+         +clr
+      &-col
+         float: left
+         padding: 0 15px
+         &:nth-child(1)
+            width: percentage(800/1200)
+         &:nth-child(2)
+            width: percentage(400/1200)
+      &-top
+         border-bottom: 2px solid rgba(#fff, .25)
+         padding-bottom: 26px
+         
+   &__info
+      +clr
+      &-col
+         float: left
+         &:nth-child(1)
+            width: 160px
+            text-align: center
+         &:nth-child(2)
+            width: calc(100% - 160px)
+            padding-left: 30px
+   &__title
+      +f('ban700', 23, 23)
+      
+   &__logo
+      height: 60px
+      margin-bottom: 20px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 50% 50%
+   &__links
+      height: 30px
+   &__link
+      display: block
+      color: #0fab6b
+      +f('ban400', 20, 20)
+      span
+         border-bottom-style: solid
+   &__result
+      margin-top: 30px
+      &-icon
+         display: inline-block
+         width: 37px
+         height: 37px
+         margin-bottom: 10px
+         +cover-img
+      p
+         +f('lat300', 15)
+         span
+            display: block
+            +f('lat400', 18, 18)
+            color: #0fab6b
+   &__info
+      padding: 20px 0 0
+      &-title
+         margin-bottom: 20px
+         font-size: 23px
+      &-list
+         margin-bottom: 30px
+         +f('lat400', 16, 16)
+         ul
+            li
+               &:not(:last-child)
+                  margin-bottom: 10px
+      &-descr
+         +f('lat300', 16, 20)
+         
+   &__request
+      &-title
+         display: flex
+         align-items: flex-start
+         font-size: 20px
+      &-logo
+         margin: 0 auto 0 10px
+         
+      &-table
+         +f('lat300', 15, 15)
+   
+         ul
+            li
+               padding: 10px 25px 10px 0
+               border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+               span
+                  float: right
+                  
+   &__region
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      &-title
+         margin-right: 25px
+      &-cities
+         +f('lat400', 15, 20)
+         color: #fff
+      &_mod
+         margin-bottom: 5px
+         .cases__region-title
+            margin-right: 5px
+   &__tabs
+      &-nav
+         margin-bottom: 10px
+// end cases //
+
 // *** begin promo *** //
 .promo
-   padding: 75px 0 215px
+   padding: 65px 0 215px
    color: #fff
    &::after
       background: rgba(#2e0f31, .9)
    &__container
    &__title
-      margin-bottom: 30px
+      margin-bottom: 45px
    &__row
       margin: 0
    &__text
-      flex: 0 0 600px
-      margin-right: 60px
+      flex: 0 0 610px
+      margin-right: 50px
       p
          +f('lat300', 22, 35)
          &:not(:last-child)
-            margin-bottom: 20px
+            margin-bottom: 37px
    
    &__img
       +ratio(506, 400)
       +cover
       &-wrap
          flex: 0 1 506px
+         margin-top: 10px
 // end promo //
 
 // *** begin team *** //
 .team
-   padding: 30px 0
+   padding: 50px 0 65px
    color: #fff
-   text-align: center
    &::after
       background: rgba(#2e0f31, .8)
    
    &__title
-      margin-bottom: 100px
+      margin-bottom: 325px
       font-size: 40px
       span
          font-size: 45px
@@ -173,21 +348,22 @@
       p
          +f('lat300')
    &__contact
-      margin-top: 30px
+      margin-top: 35px
+      text-align: center
       > a
          +f('ag400')
 // end team //
 
 // *** begin scheme *** //
 .scheme
-   padding: 50px 0
+   padding: 100px 0 190px
    color: #fff
    counter-reset: schemeCount
    &::after
       background: rgba(#000, .72)
       content: ''
    &__title
-      margin-bottom: 20px
+      margin-bottom: 45px
       
    &__block
       display: flex
@@ -196,10 +372,10 @@
       $parent: &
       display: flex
       align-items: center
-      width: 50%
+      width: 53%
       counter-increment: schemeCount
       &:not(:last-child)
-         margin-bottom: 30px
+         margin-bottom: 50px
       &_left
          align-self: flex-start
          justify-content: flex-end
@@ -211,9 +387,9 @@
          display: flex
          align-items: center
          justify-content: center
-         flex: 0 0 70px
-         width: 70px
-         height: 70px
+         flex: 0 0 74px
+         width: 74px
+         height: 74px
          border: 3px solid $color1
          border-radius: 50%
          color: $color1
@@ -227,27 +403,32 @@
          position: relative
          &::before
             position: absolute
-            top: 20px
+            top: 50%
             height: 1px
             width: 70px
             background: rgba(#fff, .5)
             content: ''
          #{$parent}_left &
-            padding-right: 148px
+            padding-right: 145px
             &::before
-               right: 0
+               right: 45px
          #{$parent}_right &
-            padding-left: 148px
+            padding-left: 145px
             &::before
-               left: 0
-            
+               left: 45px
+      &-text
+         font-size: 23px
+         line-height: 30px
+         span
+            +f('ban700')
+   
       &-btn
          margin-top: 15px
 // end scheme //
 
 // *** begin clients *** //
 .clients
-   padding: 50px 0
+   padding: 90px 0 45px
    &__title
       margin-bottom: 40px
    &__slider
@@ -270,7 +451,7 @@
 
 // *** begin thanks *** //
 .out-thanks
-   padding: 60px 0
+   padding: 75px 0 105px
    background: #f3f3ed
    &__container
       max-width: 1000px
@@ -302,20 +483,20 @@
 
 // *** begin calc *** //
 .calc
-   padding: 60px 0
+   padding: 125px 0 100px
    &::after
       background: rgba(#000, .72)
    &__container
       max-width: 750px
       text-align: center
    &__title
-      margin: 0 auto 30px
+      margin: 0 auto 40px
       color: #fff
    &__form
       &-row
          display: flex
          justify-content: space-between
-         margin-bottom: 30px
+         margin-bottom: 65px
          text-align: left
       &-fields
          flex: 0 0 320px
@@ -335,23 +516,23 @@
 
 // *** begin get-answers *** //
 .get-answers
-   padding: 100px 0
+   padding: 235px 0 150px
    text-align: center
-   //background-size: 1242px 682px
    background-size: contain
    background-repeat: no-repeat
    background-position: 50% 50%
    &__container
    &__inner
-      max-width: 600px
+      max-width: 660px
       margin: 0 auto
       color: #20262e
       +f('lat300', 22, 30)
    
    &__title
-      margin-bottom: 55px
+      margin-bottom: 45px
+      padding: 0 20px
    &__descr
-      margin-bottom: 60px
+      margin-bottom: 55px
       span
          +f('lat700')
 
