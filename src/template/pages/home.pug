@@ -14,11 +14,9 @@ block main
 				+e.inner
 					+e.text
 						+e.title
-							h1 Продающие сайты
-								br
-								| с гарантией результата
+							h1 Продвижение сайтов по РФ от 5000 руб/мес.
 						+e.sub-title.title-lg
-							h2 Клиенты на 3-й день или вернем деньги.
+							h2 Продающие сайты с гарантией результата
 						+e.descr
 							p Получите бесплатную консультацию сертифицированного специалиста
 
@@ -31,7 +29,7 @@ block main
 		//end screen
 
 		//begin why-us
-		+b.SECTION.why-us
+		+b.SECTION.why-us#why-us
 			+e.container.container
 				+e.title.title-md
 					h2 Почему стоит
@@ -84,7 +82,7 @@ block main
 		//end why-us
 
 		//begin issues
-		+b.SECTION.issues
+		+b.SECTION.issues#issues
 			+e.container.container
 				+e.title.title-md
 					h2 Ваша боль -
@@ -646,7 +644,7 @@ block main
 		include ../components/services
 
 		//begin team
-		+b.SECTION.team.has-bg(style='background-image: url(static/img/bg/team_bg.jpg)')
+		+b.SECTION.team#team.has-bg(style='background-image: url(static/img/bg/team_bg.jpg)')
 			+e.container.container
 				+e.title.title-md
 					h2 В нашей команде выходцы
@@ -663,7 +661,7 @@ block main
 		//end team
 
 		//begin scheme
-		+b.SECTION.scheme.has-bg(style='background-image: url(static/img/bg/scheme_bg.jpg)')
+		+b.SECTION.scheme.has-bg#scheme(style='background-image: url(static/img/bg/scheme_bg.jpg)')
 			+e.container.container
 				+e.title.title-md
 					h2 Схема работы с нами
@@ -749,7 +747,7 @@ block main
 		//end our-thanks
 
 		//begin calc
-		+b.SECTION.calc.has-bg(style='background-image: url(static/img/bg/calc_bg.jpg)')
+		+b.SECTION.calc.has-bg#calc(style='background-image: url(static/img/bg/calc_bg.jpg)')
 			+e.container.container
 				+e.title.title-md
 					h2 Рассчитайте стоимость продвижения

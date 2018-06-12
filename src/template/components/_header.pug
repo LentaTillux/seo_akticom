@@ -7,16 +7,16 @@
 		+e.NAV.nav
 			-
 				navList = [
-				'Почему МЫ',
-				'Наши решения',
-				'Специалисты',
-				'Схема работы',
-				'Калькулятор'
+				['why-us', 'Почему МЫ'],
+				['issues', 'Наши решения'],
+				['team', 'Специалисты'],
+				['scheme', 'Схема работы'],
+				['calc', 'Калькулятор']
 				]
 			+e.nav-inner
 				ul
-					for navText in navList
-						li: a(href='#!')= navText
+					for navEl in navList
+						li: a(href=`#${navEl[0]}`)= navEl[1]
 
 				+e.contact._nav
 					+e.A.contact-tel(href='tel:88003338392') 8-800-333-83-92
