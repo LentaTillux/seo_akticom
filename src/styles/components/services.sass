@@ -8,30 +8,31 @@
          margin-top: 0
    &_type-2
       padding: 0 0 85px
-      margin-top: -115px
+      margin-top: -145px
       +xs
-         padding: 50px 0
+         padding: 20px 0 50px
          margin-top: 0
    &__row
       flex-wrap: wrap
       justify-content: center
    &__title
-      margin-bottom: 30px
       color: #fff
       +xs
-         margin-bottom: 15px
+         margin-bottom: -15px
          color: #000
    &__item
       $parent: &
       position: relative
       flex: 0 1 calc(33.33333% - 30px)
-      margin: 0 15px
+      margin: 30px 15px 0
       max-width: 370px
+      min-width: 370px
       box-shadow: 0 24px 29px rgba(0, 0, 0, 0.13)
       border-radius: 3px
       background: #fff
       cursor: default
       +md
+         min-width: 0
          flex: 0 1 calc(50% - 30px)
          cursor: pointer
       +xs
@@ -39,20 +40,12 @@
       &:hover #{$parent}-more
          opacity: 1
          transform: scale(1)
-      &:nth-child(1) ~ &
-         +xs
-            margin-top: 30px
-      &:nth-child(2) ~ &
-         +md
-            margin-top: 30px
-      &:nth-child(3) ~ &
-         margin-top: 30px
       
       &-title
          display: flex
          justify-content: center
          align-items: center
-         min-height: 115px
+         height: 115px
          padding: 10px 15px
          border-bottom: 2px solid #e0e0d1
          +f('ban700', 30, 35)
