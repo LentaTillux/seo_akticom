@@ -23,7 +23,7 @@ block main
 					+e.FORM.form(action='#!' method='POST')
 						+e.form-group.form-group._tel
 							span +7
-							+b.INPUT.form-control(type='text' placeholder='Введите номер телефона' name='tel' required)
+							+b.INPUT.form-control(type='tel' pattern='^[ 0-9]+$' placeholder='Введите номер телефона' name='tel' required)
 
 						+b.INPUT.form-submit.btn._yellow._xs(type='submit' value='Позвоните мне')
 		//end screen
@@ -145,7 +145,7 @@ block main
 			+e.container.container
 				+e.FORM.form(action='#!' method='POST')
 					+e.form-group.form-group
-						+e.INPUT.form-control.form-control(type='text' placeholder='Какая боль у Вас?' name='' required)
+						+e.INPUT.form-control.form-control(type='text' placeholder='Какая боль у Вас? Мы перезвоним и вылечим Вас!' name='' required)
 
 					+b.INPUT.form-submit.btn._yellow._xs(type='submit' value='Перезвоните мне')
 		//end call-block
@@ -657,7 +657,7 @@ block main
 					p У каждой компании, с которой мы работаем есть разные бизнес-цели, и мы предлагаем стратегию для их достижения, выслушивая все пожелания клиентов.
 					+e.contact
 						p Позвоните сегодня по телефону
-							a(href='tel:+74996494885') +7 (499) 649-48-85
+							a(href='tel:+74954093216') +7 (495) 409-3216
 		//end team
 
 		//begin scheme
@@ -694,8 +694,8 @@ block main
 						+e.item-count
 						+e.item-content
 							+e.item-text
-								p Вы получаете первые звонки и обращения уже на
-									span 2-й день
+								p Вы получаете первые звонки и обращения уже 
+									span в первую неделю
 									= ' '
 									| после начала работ!
 		//end scheme
@@ -739,7 +739,7 @@ block main
 				+e.title.title-md
 					h2 Нас благодарят
 				+e.photos-row.row
-					-thanksList = [1, 2, 3]
+					-thanksList = [1, 2, 3, 4]
 
 					for item, i in thanksList
 						a(href=`static/img/content/docs/thanks_${i + 1}-lg.jpg` data-fancybox='thanks')
@@ -760,7 +760,7 @@ block main
 								+e.INPUT.form-control.form-control(type='text' placeholder='Введите адрес сайта' name='' required)
 
 							+e.form-group.form-group
-								+e.INPUT.form-control.form-control(type='email' placeholder='Ваша электронная почта' name='' required)
+								+e.INPUT.form-control.form-control(type='tel' pattern='^[ 0-9]+$' placeholder='Ваш телефон' name='' required)
 						+e.form-actions
 							+e.form-range
 								+b.INPUT.js-input-range(type='text' name='' required data-range-min='1' data-range-max='100' data-range-default='50')

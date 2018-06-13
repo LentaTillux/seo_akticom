@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link href="static/css/index.css" rel="stylesheet">
-    <link rel="icon" href="static/favicon.png">
+    <link rel="icon" href="static/favicon.ico">
   </head>
   <body>
     <!-- picture element HTML5 shiv-->
@@ -41,15 +41,14 @@
               </li>
             </ul>
             <div class="header__contact header__contact_nav">
-              <a class="header__contact-tel" href="tel:88003338392">8-800-333-83-92</a>
+              <a class="header__contact-tel" href="tel:+74954093216">+7 (495) 409-3216</a>
               <a class="header__contact-link" href="#!">выберите регион</a>
             </div>
           </div>
         </nav>
-        <div class="header__contact">
-          <a class="header__contact-tel" href="tel:88003338392">8-800-333-83-92</a>
-          <a class="header__contact-link" href="#!">выберите регион</a>
-        </div>
+        <!--+e.contact-->
+        <!--	+e.A.contact-tel(href='tel:+74954093216') +7 (495) 409-3216-->
+        <!--	+e.A.contact-link(href='#!') выберите регион-->
         <button class="header__nav-btn" type="button">
           <div class="header__nav-btn-burger">
             <div class="header__nav-btn-lines"></div>
@@ -78,7 +77,7 @@
             <form class="screen__form" action="#!" method="POST">
               <div class="screen__form-group form-group form-group_tel">
                 <span>+7</span>
-                <input class="form-control" type="text" placeholder="Введите номер телефона" name="tel" required="required" />
+                <input class="form-control" type="tel" pattern="^[ 0-9]+$" placeholder="Введите номер телефона" name="tel" required="required" />
               </div>
               <input class="form-submit btn btn_yellow btn_xs" type="submit" value="Позвоните мне" />
             </form>
@@ -236,7 +235,7 @@
         <div class="call-block__container container">
           <form class="call-block__form" action="#!" method="POST">
             <div class="call-block__form-group form-group">
-              <input class="call-block__form-control form-control" type="text" placeholder="Какая боль у Вас?" name="" required="required" />
+              <input class="call-block__form-control form-control" type="text" placeholder="Какая боль у Вас? Мы перезвоним и вылечим Вас!" name="" required="required" />
             </div>
             <input class="form-submit btn btn_yellow btn_xs" type="submit" value="Перезвоните мне" />
           </form>
@@ -1158,7 +1157,7 @@
             <p>У каждой компании, с которой мы работаем есть разные бизнес-цели, и мы предлагаем стратегию для их достижения, выслушивая все пожелания клиентов.</p>
             <div class="team__contact">
               <p>Позвоните сегодня по телефону
-                <a href="tel:+74996494885">+7 (499) 649-48-85</a>
+                <a href="tel:+74954093216">+7 (495) 409-3216</a>
               </p>
             </div>
           </div>
@@ -1203,8 +1202,8 @@
               <div class="scheme__item-count"></div>
               <div class="scheme__item-content">
                 <div class="scheme__item-text">
-                  <p>Вы получаете первые звонки и обращения уже на
-                    <span>2-й день</span> после начала работ!</p>
+                  <p>Вы получаете первые звонки и обращения уже
+                    <span>в первую неделю</span> после начала работ!</p>
                 </div>
               </div>
             </div>
@@ -1290,6 +1289,9 @@
             <a href="static/img/content/docs/thanks_3-lg.jpg" data-fancybox="thanks">
               <img src="static/img/content/docs/thanks_3-sm.jpg" alt="image">
             </a>
+            <a href="static/img/content/docs/thanks_4-lg.jpg" data-fancybox="thanks">
+              <img src="static/img/content/docs/thanks_4-sm.jpg" alt="image">
+            </a>
           </div>
         </div>
       </section>
@@ -1309,7 +1311,7 @@
                   <input class="calc__form-control form-control" type="text" placeholder="Введите адрес сайта" name="" required="required" />
                 </div>
                 <div class="calc__form-group form-group">
-                  <input class="calc__form-control form-control" type="email" placeholder="Ваша электронная почта" name="" required="required" />
+                  <input class="calc__form-control form-control" type="tel" pattern="^[ 0-9]+$" placeholder="Ваш телефон" name="" required="required" />
                 </div>
               </div>
               <div class="calc__form-actions">
@@ -1356,7 +1358,7 @@
           </div>
           <div class="footer__col footer__contact">
             <div class="footer__contact-item footer__contact-item_tel">
-              <a class="footer__contact-tel" href="tel:88003338392">8-800-333-83-92</a>
+              <a class="footer__contact-tel" href="tel:+74954093216">+7 (495) 409-3216</a>
               <a class="footer__link link-decor" href="#!">
                 <span>Заказать звонок</span>
               </a>
