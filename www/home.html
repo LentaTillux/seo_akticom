@@ -11,6 +11,26 @@
     <link rel="icon" href="static/favicon.ico">
   </head>
   <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M800.15 282.58v1.2a1.05 1.05 0 1 1-2.1 0v-1.2a1.05 1.05 0 1 1 2.1 0zm12.03 0v1.2a1.05 1.05 0 1 1-2.11 0v-1.2a1.05 1.05 0 1 1 2.1 0zm-2.8 8.06a6.7 6.7 0 0 1-4.27 1.45 6.7 6.7 0 0 1-4.28-1.45 1.06 1.06 0 0 1-.14-1.49 1.05 1.05 0 0 1 1.48-.14c.74.61 1.81.97 2.94.97 1.12 0 2.2-.36 2.94-.97.45-.37 1.11-.3 1.48.14.37.46.3 1.12-.14 1.5zM789.33 310h-2.1a5.86 5.86 0 0 1 3.68-5.47l8.34-3.35v-3.11c-4.65-2.11-7.99-6.66-8.38-12.02h-.19a3.47 3.47 0 0 1-1.05-6.78v-2.88h-8.57a1.05 1.05 0 0 1 0-2.11h8.61A14.32 14.32 0 0 1 803.91 261h2.4c7.88 0 14.28 6.43 14.28 14.34v3.93a3.48 3.48 0 0 1-1.05 6.78h-.19a14.36 14.36 0 0 1-8.38 12.02v3.11l8.34 3.35A5.86 5.86 0 0 1 823 310h-2.1c0-1.55-.93-2.93-2.37-3.5l-7.57-3.04a5.88 5.88 0 0 1-5.85 5.53 5.88 5.88 0 0 1-5.85-5.53l-7.58 3.03a3.76 3.76 0 0 0-2.36 3.5zm2.45-35.72h26.67a12.21 12.21 0 0 0-12.13-11.17h-2.4c-6.36 0-11.6 4.92-12.14 11.17zm24.3 2.11l.43 1.7c.15.6.69 1.02 1.31 1.02h.68v-2.72zm-24.34 2.72h.67c.63 0 1.17-.42 1.32-1.03l.42-1.69h-2.41zm17.14 19.72a14.22 14.22 0 0 1-7.52 0v4.28a3.77 3.77 0 0 0 3.76 3.77c2.07 0 3.76-1.7 3.76-3.77v-4.28zM817.3 285c0-.59.47-1.06 1.05-1.06h1.2a1.36 1.36 0 0 0 0-2.72h-1.73a3.46 3.46 0 0 1-3.35-2.63l-.55-2.2h-17.6l-.55 2.2a3.46 3.46 0 0 1-3.36 2.63h-1.73a1.36 1.36 0 0 0 0 2.72h1.2c.59 0 1.06.47 1.06 1.06 0 6.74 5.46 12.22 12.18 12.22 6.71 0 12.18-5.48 12.18-12.22z"
+          />
+        </defs>
+        <symbol id="icon-arr" viewBox="0 0 492 492">
+          <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"
+          />
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 212.982 212.982">
+          <path d="M131.804 106.491l75.936-75.936c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.491 81.18 30.554 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.989 6.99-6.989 18.323 0 25.312l75.937 75.936-75.937 75.937c-6.989 6.99-6.989 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0l75.937-75.937 75.937 75.937c6.989 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.322 0-25.312l-75.936-75.936z"
+            fill-rule="evenodd" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="icon-shape" viewBox="0 0 47 52">
+          <use xlink:href="#a" transform="translate(-778 -259)" />
+        </symbol>
+      </svg>
+    </div>
     <!-- picture element HTML5 shiv-->
     <script>
       document.createElement('picture');
@@ -163,7 +183,7 @@
               </div>
             </div>
           </div>
-          <a class="why-us__btn btn btn_yellow btn_lg" href="#!">Оставить заявку на расчет стоимости</a>
+          <a class="why-us__btn btn btn_yellow btn_lg" href="#" data-popup-target="requestPopup" data-link-info="why-us: (Оставить заявку на расчет стоимости)">Оставить заявку на расчет стоимости</a>
         </div>
       </section>
       <!--end why-us-->
@@ -874,7 +894,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -896,7 +916,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -917,7 +937,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -938,7 +958,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -958,7 +978,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -977,7 +997,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
           </div>
@@ -1028,7 +1048,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -1050,7 +1070,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -1071,7 +1091,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -1093,7 +1113,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -1115,7 +1135,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
             <div class="services__item" onclick="">
@@ -1138,7 +1158,7 @@
                   <h4>От
                     <span>5 000</span> руб</h4>
                 </div>
-                <a class="services__item-btn btn btn_yellow" href="#!">Оставить заявку</a>
+                <a class="services__item-btn btn btn_yellow" href="#!" data-popup-target="requestPopup" data-link-info="services: (Оставить заявку)">Оставить заявку</a>
               </div>
             </div>
           </div>
@@ -1178,7 +1198,7 @@
                 <div class="scheme__item-text">
                   <p>Получаем вашу заявку</p>
                 </div>
-                <a class="scheme__item-btn btn btn_yellow btn_xs" href="#!">Оставить заявку</a>
+                <a class="scheme__item-btn btn btn_yellow btn_xs" href="#" data-popup-target="requestPopup" data-link-info="scheme: (Схема работы с нами)">Оставить заявку</a>
               </div>
             </div>
             <div class="scheme__item scheme__item_left">
@@ -1328,7 +1348,7 @@
       </section>
       <!--end calc-->
       <!--begin get-answers-->
-      <section class="get-answers" style="background-image: url(static/img/bg/get-answers_bg.png)">
+      <section class="get-answers" id="get-answers" style="background-image: url(static/img/bg/get-answers_bg.png)">
         <div class="get-answers__container container">
           <div class="get-answers__inner">
             <div class="get-answers__title title-md">
@@ -1339,29 +1359,11 @@
               <p>Перед стартом работ мы обсуждаем с вами
                 <span>более 190 вопросов</span>, специально подготовленных для вашей ниши.</p>
             </div>
-            <a class="get-answers__btn btn btn_yellow btn_md" href="#!">Получить вопросы на почту</a>
+            <a class="get-answers__btn btn btn_yellow btn_md" href="#!" data-popup-target="requestPopup" data-link-info="get-answers: (Получить более 190 вопросов на почту)">Получить вопросы на почту</a>
           </div>
         </div>
       </section>
       <!--end get-answers-->
-      <!-- begin request pop-up+b.popup._request(data-popup-id='requestPopup', tabindex='-1', role='dialog')
-  +e.container
-    +e.close.js-popup-close
-      +i('close')
-    +e.inner
-      +e.H5.title Оставьте данные и мы свяжемся с вами в ближайшее время
-      +e.FORM(action='#!' method='POST')
-        +e.form-field
-          +e.INPUT.input(type='text' placeholder='Ваше имя' name='' required)
-          +i('user')
-        +e.form-field
-          +e.INPUT.input(type='email' placeholder='Ваш email' name='' required)
-          +i('email')
-        +e.form-field
-          +e.INPUT.input(type='tel' placeholder='Ваш телефон' name='' required)
-          +i('phone')
-
-        +e.INPUT.submit-btn.btn._white(type='submit' value='Оставить заявку')-->
     </main>
     <!--begin footer-->
     <footer class="footer">
@@ -1378,7 +1380,7 @@
           <div class="footer__col footer__contact">
             <div class="footer__contact-item footer__contact-item_tel">
               <a class="footer__contact-tel" href="tel:+74954093216">+7 (495) 409-3216</a>
-              <a class="footer__link link-decor" href="#!" data-popup-target="requestPopup" data-link-info="Footer: (Заказать звонок)">
+              <a class="footer__link link-decor" href="#" data-popup-target="requestPopup" data-link-info="Footer: (Заказать звонок)">
                 <span>Заказать звонок</span>
               </a>
             </div>
@@ -1388,7 +1390,7 @@
               </div>
               <p>443041, Самара, Ленинская, 168, оф. 446, 4 этаж, правое крыло</p>
             </div>
-            <a class="footer__link link-decor" href="#!">
+            <a class="footer__link link-decor" href="#!" data-popup-target="requestPopup" data-link-info="Footer: (Задать вопрос менеджеру Akticom)">
               <span>Задать вопрос менеджеру Akticom</span>
             </a>
           </div>
@@ -1408,6 +1410,33 @@
       </div>
     </footer>
     <!--end footer-->
+    <!-- begin request pop-up-->
+    <div class="popup popup_request" data-popup-id="requestPopup" tabindex="-1" role="dialog">
+      <div class="popup__container">
+        <div class="popup__close js-popup-close">
+          <svg class="icon-close ">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+          </svg>
+        </div>
+        <div class="popup__inner">
+          <h5 class="popup__title">Введите ваши данные в форме ниже</h5>
+          <form action="#!" method="POST">
+            <div class="popup__form-field">
+              <input class="popup__input" type="text" placeholder="Ваше имя" name="" required="required" />
+            </div>
+            <div class="popup__form-field">
+              <input class="popup__input" type="email" placeholder="Ваш email" name="" required="required" />
+            </div>
+            <div class="popup__form-field">
+              <input class="popup__input" type="tel" placeholder="Ваш телефон" name="" pattern="^[ 0-9]+$" required="required" />
+            </div>
+            <!--+e.form-field-->
+            <!--  +e.INPUT.input(type='text' placeholder='Ваш вопрос' name='')-->
+            <input class="popup__submit-btn btn btn_yellow btn_xs" type="submit" value="Заказать звонок" />
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Scripts-->
     <script src="static/js/jquery-3.3.1.min.js"></script>
     <script src="static/js/index.js"></script>

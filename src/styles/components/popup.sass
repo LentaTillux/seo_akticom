@@ -38,7 +38,7 @@
 		align-items: center
 		justify-content: center
 		border-radius: 50%
-		background-color: #f39200
+		background-color: #ffcd00
 		+trs
 		+xs
 			top: -17px
@@ -59,16 +59,25 @@
 			content: ''
 			z-index: 1
 			+trs
+		&:hover .icon, &:hover .icon-close
+			fill: rgba(112, 49, 171, 0.9)
 		.no-touch &:hover .icon
 			fill: #fff
 		.no-touch &:active .icon
 			fill: #fff
 		.icon
-			fill: #f39200
+			fill: rgba(150, 150, 150, 0.9)
 			font-size: 18px
 			z-index: 2
 			+trs
-		
+		.icon-close
+			fill: rgba(150, 150, 150, 0.9)
+			font-size: 18px
+			width: 18px
+			height: 18px
+			z-index: 2
+			+trs
+
 	&__container
 		display: inline-block
 		vertical-align: middle
@@ -85,7 +94,7 @@
 		border-radius: 10px
 		#{$parent}_request &
 			max-width: 498px
-			background-color: #e38902
+			background-color: rgba(81, 44, 115, 0.9)
 			+xs
 				max-width: 300px
 				padding: 20px 10px 30px
@@ -115,7 +124,8 @@
 		padding: 0 10px
 		margin-bottom: 23px
 		color: #fff
-		font-size: 18px
+		font-size: 22px
+		font-weight: bold
 		#{$parent}_request &
 			+xs
 				font-size: 16px

@@ -78,7 +78,7 @@ block main
 					each item in whyList
 						+whyItem(item)
 
-				+e.A.btn.btn._yellow._lg(href='#!') Оставить заявку на расчет стоимости
+				+e.A.btn.btn._yellow._lg(href='#' data-popup-target='requestPopup' data-link-info='why-us: (Оставить заявку на расчет стоимости)') Оставить заявку на расчет стоимости
 		//end why-us
 
 		//begin issues
@@ -672,7 +672,7 @@ block main
 						+e.item-content
 							+e.item-text
 								p Получаем вашу заявку
-							+e.A.item-btn.btn._yellow._xs(href='#!') Оставить заявку
+							+e.A.item-btn.btn._yellow._xs(href='#' data-popup-target='requestPopup' data-link-info='scheme: (Схема работы с нами)') Оставить заявку
 
 					+e.item._left
 						+e.item-count
@@ -770,7 +770,7 @@ block main
 		//end calc
 
 		//begin get-answers
-		+b.SECTION.get-answers(style='background-image: url(static/img/bg/get-answers_bg.png)')
+		+b.SECTION#get-answers.get-answers(style='background-image: url(static/img/bg/get-answers_bg.png)')
 			+e.container.container
 				+e.inner
 					+e.title.title-md
@@ -783,7 +783,6 @@ block main
 							span более 190 вопросов
 							| , специально подготовленных для вашей ниши.
 
-					+e.A.btn.btn._yellow._md(href='#!') Получить вопросы на почту
+					+e.A.btn.btn._yellow._md(href='#!' data-popup-target='requestPopup' data-link-info='get-answers: (Получить более 190 вопросов на почту)') Получить вопросы на почту
 		//end get-answers
 
-		include ../components/popup

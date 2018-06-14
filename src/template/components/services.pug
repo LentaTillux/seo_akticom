@@ -27,7 +27,7 @@ if services ? services : services = []
 								span 5 000
 								= ' '
 								| руб
-						+e.A.item-btn.btn._yellow(href='#!') Оставить заявку
+						+e.A.item-btn.btn._yellow(href='#!' data-popup-target='requestPopup' data-link-info='services: (Оставить заявку)') Оставить заявку
 
 			each item in servicesList
 				+servicesItem(item)

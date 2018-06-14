@@ -4414,7 +4414,7 @@ isstream@0.1.x, isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-"jquery@>= 1.4.3", jquery@>=1.8, jquery@^3.3.1:
+"jquery@>= 1.4.3", jquery@>=1.8, jquery@^3.0.0, jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -8540,6 +8540,12 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+vintage-popup@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/vintage-popup/-/vintage-popup-0.1.10.tgz#fb22969bb74ec241fe200b8f91bc96e74f828ef3"
+  dependencies:
+    jquery "^3.0.0"
 
 vinyl-fs@^0.3.0:
   version "0.3.14"
