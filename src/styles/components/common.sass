@@ -1,0 +1,183 @@
+// basic styles
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('ban300', 18, 22)
+   color: #000
+
+.container
+   position: relative
+   max-width: 1200px
+   padding: 0 15px
+   margin: 0 auto
+
+.row
+   display: flex
+   margin: 0 -15px
+
+.content
+   overflow: hidden
+
+.link-decor
+   span
+      color: currentColor
+      border-bottom: 1px dashed currentColor
+      +trs
+   &:hover span
+      border-bottom-color: transparent
+
+.title-md
+   +f('ban300', 45, 58)
+   text-align: center
+   +xs
+      font-size: 30px
+      line-height: 30px
+   span
+      +f('ban700')
+
+.title-lg
+   text-align: center
+   +f('ban700', 45, 50)
+   +xs
+      font-size: 30px
+      line-height: 35px
+   
+.btn
+   display: inline-block
+   text-align: center
+   cursor: pointer
+   color: #363531
+   +f('lat400', 16, 16)
+   transition: .3s ease
+   border-radius: 50px !important
+   outline: 0
+   border: 0
+   &_yellow
+      background: $color1
+      &:hover
+         background: #ffb500
+         box-shadow: none
+   &_xs
+      min-width: 170px
+      padding: 17px 10px
+      box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+      +xs
+         min-width: 0
+         padding: 17px 30px
+   &_md
+      min-width: 358px
+      padding: 17px 15px
+      box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+      +xs
+         min-width: 0
+         margin: 0 -10px
+   &_lg
+      min-width: 430px
+      padding: 17px 20px
+      box-shadow: 0 11px 27px rgba(30, 30, 30, 0.13)
+      +xs
+         min-width: 0
+
+.slider
+   display: none
+   &.slick-initialized
+      display: block
+   
+   &__btn
+      position: absolute
+      top: 50%
+      z-index: 1
+      margin-top: -20px
+      outline: 0
+      border: 0
+      padding: 0
+      height: 40px
+      overflow: hidden
+      .no-touch &:hover svg
+         fill: $color1
+      &.slick-disabled
+         svg
+            fill: #c5c5c5
+         .no-touch &:hover svg
+            fill: #c5c5c5
+      
+      svg
+         width: 21px
+         height: 40px
+         fill: #000
+         +trs
+      &_prev
+         left: -30px
+         +md
+            left: 0
+      &_next
+         right: -30px
+         +md
+            right: 0
+      
+.form-group
+   &_tel
+      position: relative
+      min-width: 470px
+      +xs
+         min-width: 0
+         width: 100%
+      span
+         position: absolute
+         top: 0
+         left: 28px
+         bottom: 0
+         color: #000
+         line-height: 50px
+      .form-control
+         padding: 0 20px 0 60px
+   
+.form-control
+   width: 100%
+   height: 50px
+   padding: 0 20px
+   border-radius: 50px!important
+   outline: 0
+   border: 0
+   +f('lat300', 16, 50)
+   background: rgba(#fff, .5)
+   box-shadow: 0 2px 9px rgba(30, 30, 30, 0.3)
+   color: #fff
+   +placeholder-color(#000)
+   
+.has-bg
+   position: relative
+   +cover
+   &::after
+      +coverdiv
+      background: rgba($color2, .9)
+      pointer-events: none
+      content: ''
+      
+   .container
+      position: relative
+      z-index: 1
+      
+.logo
+   display: block
+   flex: 0 0 171px
+   width: 171px
+   height: 61px
+   +cover-img
+   
+.tabs
+   &__nav
+      button
+         +f('lat400', 15, 20)
+         color: #fff
+         outline: 0
+         padding: 0
+         border: 0
+         cursor: pointer
+         transition: .3s ease
+         &:not(:last-child)
+            margin-right: 15px
+         &.is-active
+            color: $color1
+            pointer-events: none

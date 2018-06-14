@@ -1,0 +1,32 @@
+//begin header
++b.HEADER.header(class= headerClass || '')
+	+e.container.container
+		+e.A.logo.logo(href='#!')
+			+e.IMG(src='static/img/other/logo.png' alt='image')
+
+		+e.NAV.nav
+			-
+				navList = [
+				['why-us', 'Почему МЫ'],
+				['issues', 'Наши решения'],
+				['team', 'Специалисты'],
+				['scheme', 'Схема работы'],
+				['calc', 'Калькулятор']
+				]
+			+e.nav-inner
+				ul
+					for navEl in navList
+						li: a(href=`#${navEl[0]}`)= navEl[1]
+
+				+e.contact._nav
+					+e.A.contact-tel(href='tel:+74954093216') +7 (495) 409-3216
+					+e.A.contact-link(href='#!') выберите регион
+
+		+e.contact
+			+e.A.contact-tel(href='tel:+74954093216') +7 (495) 409-3216
+		//	+e.A.contact-link(href='#!') выберите регион
+
+		+e.BUTTON.nav-btn(type='button')
+			+e.nav-btn-burger
+				+e.nav-btn-lines
+//end header

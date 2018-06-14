@@ -1,0 +1,34 @@
+if services ? services : services = []
+
+//begin services
++b.SECTION.services(class= services.classMod || '')
+	+e.container.container
+		if services.title
+			+e.title.title-md
+				h2 Услуги по
+					span продвижению сайтов
+
+		+e.row.row
+
+			mixin servicesItem(item)
+				+e.item(onclick='')
+					+e.item-title
+						h3= item.title
+							if item.titleBr
+								br
+								= item.titleBr
+					+e.item-list
+						ul
+							each descr in item.descr
+								li= descr
+					+e.item-more
+						+e.item-price
+							h4 От
+								span 5 000
+								= ' '
+								| руб
+						+e.A.item-btn.btn._yellow(href='#!') Оставить заявку
+
+			each item in servicesList
+				+servicesItem(item)
+		//end services

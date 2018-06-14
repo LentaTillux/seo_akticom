@@ -1,0 +1,789 @@
+extends ../extend/default
+
+block variables
+	- var title = 'Home page';
+	-headerClass = '_absolute';
+
+block main
+	main.content
+
+		//begin screen
+		+b.SECTION.screen(style='background-image: url(static/img/bg/screen_bg.jpg)')
+			+e.container.container
+
+				+e.inner
+					+e.text
+						+e.title
+							h1 Продвижение сайтов по РФ от 5000 руб/мес.
+						+e.sub-title.title-lg
+							h2 Продающие сайты с гарантией результата
+						+e.descr
+							p Получите бесплатную консультацию сертифицированного специалиста
+
+					+e.FORM.form(action='#!' method='POST')
+						+e.form-group.form-group._tel
+							span +7
+							+b.INPUT.form-control(type='tel' pattern='^[ 0-9]+$' placeholder='Введите номер телефона' name='tel' required)
+
+						+b.INPUT.form-submit.btn._yellow._xs(type='submit' value='Позвоните мне')
+		//end screen
+
+		//begin why-us
+		+b.SECTION.why-us#why-us
+			+e.container.container
+				+e.title.title-md
+					h2 Почему стоит
+						span работать именно с нами
+				+e.row.row
+					-
+						whyList = [{
+						iconClass: 'light',
+						title: '10 лет',
+						descr: 'на рынке ИТ'
+						}, {
+						iconClass: 'spec',
+						title: '32 специалиста',
+						descr: 'в штате'
+						}, {
+						iconClass: 'monitor',
+						title: '150 проектов',
+						descr: 'по всей РФ в работе'
+						}, {
+						iconClass: 'plane',
+						title: 'более 30 000 запросов',
+						descr: 'наших клиентов держим в ТОПе'
+						}, {
+						iconClass: 'hand',
+						title: '28% клиентов',
+						descr: 'работают с нами более 5 лет'
+						}, {
+						iconClass: 'star',
+						title: 'ТОП 5 среди',
+						brTitle: 'seo-омпаний',
+						descr: 'в Самарской области'
+						}]
+
+					mixin whyItem(item)
+						+e.item
+							+e.item-icon-wrap
+								+e.item-icon(class= `icon-why-us_${item.iconClass}`)
+							+e.item-title
+								h4= item.title
+									if item.brTitle
+										br
+										= item.brTitle
+							+e.item-descr
+								p= item.descr
+
+					each item in whyList
+						+whyItem(item)
+
+				+e.A.btn.btn._yellow._lg(href='#!') Оставить заявку на расчет стоимости
+		//end why-us
+
+		//begin issues
+		+b.SECTION.issues#issues
+			+e.container.container
+				+e.title.title-md
+					h2 Ваша боль -
+						span наше решение
+
+				+e.block
+					+e.item
+						+e.count
+						+e.descr
+							p У моего сайта много посетителей, а заявок нет
+						+e.solution
+							p
+								span Максимальная конверсия
+								= ' '
+								| от сайта, которой нам удалось добиться - 48%. Мы прооптимизируем ваш сайт в рамках продвижения.
+
+					+e.item
+						+e.count
+						+e.descr
+							p Сайт не приносит денег
+						+e.solution
+							p
+								span 87% наших проектов
+								= ' '
+								| приносят клиентов на 3-й день работы
+
+					+e.item
+						+e.count
+						+e.descr
+							p Мои специалисты говорят, что что-то делают, а по факту на сайте ничего не меняется
+						+e.solution
+							p
+								span Мы знаем свое дело на 5+
+								= ' '
+								| и видим издалека, над каким сайтом работают профессионалы, а над каким дилетанты. Но этого не видит наш клиент, поэтому ежемесячно мы отчитываемся о ходе работ, чтобы вы точно знали, что было сделанно в том или ином месяце.
+
+					+e.item
+						+e.count
+						+e.descr
+							p Мой сайт вообще не ищется в поисковиках
+						+e.solution
+							p Cкорее всего
+								span разработчики допустили распространенную ошибку
+								= ' '
+								| - закрыли и потом не открыли сайт в robots.txt
+
+					+e.item
+						+e.count
+						+e.descr
+							p Наш сайт продвигают фрилансеры, чем вы лучше
+						+e.solution
+							p
+								span Нас более 20 человек
+								= ' '
+								| и каждый обладает уникальными навыками по отношению к команде, вместе мы способны продвинуть любой ресурс, по одиночке - вряд ли.
+		//end issues
+
+		//begin call-block
+		+b.SECTION.call-block.has-bg(style='background-image: url(static/img/bg/call-block_bg.jpg)')
+			+e.container.container
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-group.form-group
+						+e.INPUT.form-control.form-control(type='text' placeholder='Какая боль у Вас? Мы перезвоним и вылечим Вас!' name='' required)
+
+					+b.INPUT.form-submit.btn._yellow._xs(type='submit' value='Перезвоните мне')
+		//end call-block
+
+		//begin cases
+		+b.SECTION.cases.has-bg(style=`background-image: url(static/img/bg/cases_bg.jpg)`)
+			+e.container.container
+				+e.main-title.title-lg
+					h2 Кейсы
+
+				+e.slider.slider
+					+e.item
+						+e.item-inner.tabs
+							+e.item-col
+								+e.item-top
+									+e.title
+										h4 Литейный завод автолитмаш
+								+e.info
+									+e.info-col
+										+e.logo(style='background-image: url(static/img/content/clients/avtolit.jpg)')
+
+										+e.A.link.link-decor(href='http://alm163.ru/' target='_blank')
+											span alm163.ru
+										+e.result
+											+e.result-icon
+												+e.IMG(src='static/img/other/graph.png' alt='image')
+											+e.result-text
+												p
+													span на 56%
+													= ' '
+													| увеличилась посещаемость
+
+									+e.info-col
+										+e.region
+											+e.region-title
+												h5 Регион:
+											+e.region-cities.tabs__nav
+												button(type='button') Москва
+												button(type='button') Санкт-Петербург
+												button(type='button') Казань, Екатеринбург
+										+e.info-title
+											h5 Были проведены следующие работы:
+										+e.info-list
+											ul
+												li - Повышение узнаваемости бренда
+												li - увеличение трафика
+
+										+e.info-descr
+											p Предприятие «АвтоЛитМаш» с 2011 года предлагает клиентам широкий спектр услуг в области литейного производства. Для повышения популярности бренда были выполнены следующие работы. Была настроена контекстно-медийная реклама, подключено SMM продвижение и работа с контентом: замена текстов на сайте на уникальные, написание метатегов и замена заголовков. Для привлечения регионального трафика была проведена работа с региональной выдачей. Помимо этого были проведены технические доработки, что послужило залогом быстрой индексации страниц сайта и корректного ранжирования поисковыми системами. В итоге кампании произошло увеличение переходов из поисковых сетей, прямых переходов, переходов по ссылкам на сайтах, переходов из социальных сетей, что привело к росту трафика на 56%.
+
+							+e.item-col
+								+e.item-top
+									+e.request-title
+										span Запрос
+										+e.request-logo
+											+e.IMG(src='static/img/other/yandex.png' alt='Yandex')
+										+e.request-place
+											span Место
+
+								+e.request-data.tabs__content
+									+e.request-table.tabs__content-item
+										ul
+											li литье алюминия
+												span 6
+											li литье в кокиль
+												span 5
+											li алюминиевое литье
+												span 4
+											li отливики из алюминия
+												span 7
+
+									+e.request-table.tabs__content-item
+										ul
+											li литье алюминия
+												span 9
+											li литье в кокиль
+												span 5
+											li алюминиевое литье
+												span 3
+											li отливики из алюминия
+												span 6
+
+									+e.request-table.tabs__content-item
+										ul
+											li литье алюминия
+												span 8
+											li литье в кокиль
+												span 5
+											li алюминиевое литье
+												span 3
+											li отливики из алюминия
+												span 5
+
+					+e.item
+						+e.item-inner.tabs
+							+e.item-col
+								+e.item-top
+									+e.title
+										h4 Бизнес Гарант
+								+e.info
+									+e.info-col
+										+e.logo(style='background-image: url(static/img/content/clients/bg-company.jpg)')
+
+										+e.links.tabs__content
+											+e.A.link.link-decor.tabs__content-item(href='https://buh.bg63.ru/' target='_blank')
+												span buh.bg63.ru
+											+e.A.link.link-decor.tabs__content-item(href='https://jur.bg63.ru/' target='_blank')
+												span jur.bg63.ru
+
+										+e.result
+											+e.result-icon
+												+e.IMG(src='static/img/other/graph.png' alt='image')
+											+e.result-text
+												p
+													span на 30%
+													= ' '
+													| увеличилась посещаемость
+
+									+e.info-col
+										+e.region._mod
+											+e.region-title
+												h5 Регион:
+											+e.region-cities
+												p Самара
+										+e.tabs-nav.tabs__nav
+											button(type='button') Бухгалтерские услуги
+											button(type='button') Корпоративное право
+
+										+e.info-title
+											h5 Были проведены следующие работы:
+										+e.info-list
+											ul
+												li - Комплексное продвижение сайта
+
+										+e.info-descr
+											p Компания Бизнес Гарант осуществляет бухгалтерские и юридические услуги для бизнеса и частных лиц. Задачей нашей команды стало комплексное продвижение сайта по обоим направлениям для получения положительной динамики сайта в поисковой выдаче и поддержание достигнутого эффекта. Ключевым этапом работ по поисковой оптимизации является анализ, поэтому нами был проведен аудит сайта, поиск ошибок, мешающих продвижению, проверка всего, что влияет на позиции сайта: санкции поисковых систем, метатеги, адресация, структура данных, заголовки, внутренние ссылки, редиректы. Мы провели анализ двух предметных областей: бухгалтерских и юридических услуг и выявили приоритетные направления продвижения. Далее мы провели работы по увеличению ссылочной массы, реализовали утвержденную стратегию поисковой оптимизации, провели рекламную кампанию ресурса, в том числе и в социальных медиа.
+
+							+e.item-col
+								+e.item-top
+									+e.request-title
+										span Запрос
+										+e.request-logo
+											+e.IMG(src='static/img/other/yandex.png' alt='Yandex')
+										+e.request-place
+											span Место
+
+								+e.request-data.tabs__content
+									+e.request-table.tabs__content-item
+										ul
+											li аутсорсинг бухгалтерских услуг
+												span 3
+											li бухгалтерский учет в ооо в самаре
+												span 2
+											li бухгалтерское сопровождение
+												span 1
+											li бухгалтерские услуги
+												span 9
+											li бухгалтерский аутсорсинг
+												span 3
+
+									+e.request-table.tabs__content-item
+										ul
+											li банкротство
+												span 7
+											li банкротство юридических лиц
+												span 4
+											li ликвидация ооо
+												span 9
+											li регистрация ооо
+												span 5
+											li банкротство ооо в самаре
+												span 1
+											li регистрация ооо в самаре
+												span 2
+
+					+e.item
+						+e.item-inner
+							+e.item-col
+								+e.item-top
+									+e.title
+										h4 ООО Юридическая компания &laquo;ALP Group&raquo;
+								+e.info
+									+e.info-col
+										+e.logo(style='background-image: url(static/img/content/clients/alp.jpg)')
+
+										+e.A.link.link-decor(href='http://group-alp.com/' target='_blank')
+											span group-alp.com
+										+e.result
+											+e.result-icon
+												+e.IMG(src='static/img/other/graph.png' alt='image')
+											+e.result-text
+												p
+													span на 37%
+													= ' '
+													| увеличилась посещаемость
+
+									+e.info-col
+										+e.region._mod
+											+e.region-title
+												h5 Регион:
+											+e.region-cities
+												p Москва
+
+										+e.info-title
+											h5 Были проведены следующие работы:
+										+e.info-list
+											ul
+												li - Продвижение молодого сайта в Москве
+
+										+e.info-descr
+											p Компания "Комплексная правовая защита" (Absolute legal protection group) специализируется на оказании юридических услуг физическим, юридическим лицам и индивидуальным предпринимателям. Команда Актиком осуществила ряд работ по продвижению сайта «с нуля». Были проведены мероприятия по технической подготовке ресурса к индексации поисковиками, составлению семантического ядра и внешней оптимизации, распределению ключевых слов по страницам, подбору посадочных страниц и списка поисковых запросов, под которые они будут оптимизироваться, формирование внутренней ссылочной массы. Улучшая юзабилити, мы провели оценку того, как пользователь ориентируется по разделам, что мешает ему найти информацию и отправить заявку. С учетом предпочтений целевой аудитории, региона и уровня конкуренции в юридической  тематике была проведена грамотная внутренняя и внешняя оптимизация, внедрен продуманный интерфейс, приятный дизайн и качественное текстовое наполнение.
+
+							+e.item-col
+								+e.item-top
+									+e.request-title
+										span Запрос
+										+e.request-logo
+											+e.IMG(src='static/img/other/yandex.png' alt='Yandex')
+										+e.request-place
+											span Место
+
+								+e.request-data
+									+e.request-table
+										ul
+											li юридическая помощь при разводе
+												span 4
+											li адвокат по налоговым спорам Москва
+												span 9
+											li банкротство физических лиц Москва
+												span 9
+											li банкротство физических лиц услуги юриста
+												span 2
+											li решение страховых споров
+												span 8
+
+					+e.item
+						+e.item-inner
+							+e.item-col
+								+e.item-top
+									+e.title
+										h4 Технология управления
+								+e.info
+									+e.info-col
+										+e.logo(style='background-image: url(static/img/content/clients/samtu.jpg)')
+
+										+e.A.link.link-decor(href='http://www.samtu.ru/' target='_blank')
+											span www.samtu.ru
+										+e.result
+											+e.result-icon
+												+e.IMG(src='static/img/other/graph.png' alt='image')
+											+e.result-text
+												p
+													span на 32%
+													= ' '
+													| увеличилась посещаемость
+
+									+e.info-col
+										+e.region._mod
+											+e.region-title
+												h5 Регион:
+											+e.region-cities
+												p Самара
+
+										+e.info-title
+											h5 Были проведены следующие работы:
+										+e.info-list
+											ul
+												li - Увеличения числа целевых действий, конверсии сайта: заявок, звонков, обращений в компанию
+
+										+e.info-descr
+											p Юридическая компания «Технология Управления» более 14-ти лет оказывает юридические услуги для граждан и юридических лиц.
+											p Для увеличения конверсии сайта было проведено комплексное развитие и продвижение сайта. Выявлены категории запросов, способные генерировать наибольшее число целевых действий. Проведен анализ поведения целевой аудитории, повышено число переходов посетителей как из поисковых систем, так и с других источников трафика и повышено число звонков на сайте от посетителей. Также охвачена аудитория, использующая для поиска смартфоны, что обеспечило дополнительный прирост заявок и звонков.
+
+							+e.item-col
+								+e.item-top
+									+e.request-title
+										span Запрос
+										+e.request-logo
+											+e.IMG(src='static/img/other/yandex.png' alt='Yandex')
+										+e.request-place
+											span Место
+
+								+e.request-data
+									+e.request-table
+										ul
+											li автоюрист Самара
+												span 3
+											li банкротство физических лиц Самара
+												span 8
+											li независимая автоэкспертиза
+												span 2
+											li открыть ип в Cамаре
+												span 8
+											li взыскание алиментов
+												span 7
+											li приватизация квартиры
+												span 4
+											li оспаривание кадастровой стоимости
+												span 2
+											li адвокат по семейным делам
+												span 6
+
+					+e.item
+						+e.item-inner
+							+e.item-col
+								+e.item-top
+									+e.title
+										h4 Агентство оценки &laquo;Grand Estate&raquo;
+								+e.info
+									+e.info-col
+										+e.logo(style='background-image: url(static/img/content/clients/grand-est.jpg)')
+
+										+e.A.link.link-decor(href='http://grand-ocenka.ru/' target='_blank')
+											span grand-ocenka.ru
+										+e.result
+											+e.result-icon
+												+e.IMG(src='static/img/other/graph.png' alt='image')
+											+e.result-text
+												p
+													span на 28%
+													= ' '
+													| увеличилась посещаемость
+
+									+e.info-col
+										+e.region._mod
+											+e.region-title
+												h5 Регион:
+											+e.region-cities
+												p Самара
+
+										+e.info-title
+											h5 Были проведены следующие работы:
+										+e.info-list
+											ul
+												li - Увеличения конверсии сайта
+												li - продвижение по запросам
+
+										+e.info-descr
+											p ООО «Агентство оценки «Гранд Истейт» - организация, специализирующаяся на оценке имущества и прав, судебной экспертизе, инвестиционном консалтинге. Чтобы получить возможность конкурировать с сайтами в поисковой выдаче, необходимо было провести технические работы.  Специалисты по поисковому продвижению оптимизировали код, провели внутренние корректировки страниц. Комплекс работ по продвижению включил в себя: SEO по позициям - были отобраны эффективные на данный момент запросы, SEO по трафику – проведен анализ ресурса, спроса в тематике и составлен трафика), настроена контекстная реклама, настроена реклама на Яндекс.Маркете, осуществлено продвижение из социальных сетей. Наши специалисты следят за актуальностью содержимого сайта и дают рекомендации по оптимизации сайта.
+
+							+e.item-col
+								+e.item-top
+									+e.request-title
+										span Запрос
+										+e.request-logo
+											+e.IMG(src='static/img/other/yandex.png' alt='Yandex')
+										+e.request-place
+											span Место
+
+								+e.request-data
+									+e.request-table
+										ul
+											li оценка недвижимости
+												span 4
+											li оценка квартиры
+												span 2
+											li автоэкспертиза
+												span 2
+											li оценка бизнеса
+												span 3
+											li товарная экспертиза
+												span 8
+
+					+e.item
+						+e.item-inner
+							+e.item-col
+								+e.item-top
+									+e.title
+										h4 Дом цветов
+								+e.info
+									+e.info-col
+										+e.logo(style='background-image: url(static/img/content/clients/dom-cvetov.jpg)')
+
+										+e.A.link.link-decor(href='http://cveti63.ru/' target='_blank')
+											span cveti63.ru
+										+e.result
+											+e.result-icon
+												+e.IMG(src='static/img/other/graph.png' alt='image')
+											+e.result-text
+												p
+													span на 52%
+													= ' '
+													| увеличилась посещаемость
+
+									+e.info-col
+										+e.region._mod
+											+e.region-title
+												h5 Регион:
+											+e.region-cities
+												p Самара
+
+										+e.info-title
+											h5 Были проведены следующие работы:
+										+e.info-list
+											ul
+												li - Увеличение количества заказов с сайта
+
+										+e.info-descr
+											p Для увеличения заказов интернет-магазина цветов было проведено комплексное продвижение, включающее в себя следующие работы: анализ сайтов основных конкурентов и используемых ими рекламных каналов,  аудит сайта и исправление проблем (неуникальный контент, технические ошибки), анализ юзабилити.  Было проведено наполнение карточек товаров, добавлены разделы. Было произведено изменение url и заголовков страниц, что привело к развитию сайта. В итоге проведенной кампании по продвижению интернет-магазина были достигнуты цели по трафику и позициям были, посетители становятся покупателями. Увеличение трафика составило 52%.
+
+							+e.item-col
+								+e.item-top
+									+e.request-title
+										span Запрос
+										+e.request-logo
+											+e.IMG(src='static/img/other/yandex.png' alt='Yandex')
+										+e.request-place
+											span Место
+
+								+e.request-data
+									+e.request-table
+										ul
+											li купить цветы недорого
+												span 2
+											li заказать цветы с доставкой
+												span 2
+											li цветы с доставкой
+												span 2
+											li доставка цветов в Самаре
+												span 1
+											li где купить цветы
+												span 1
+											li доставка букетов
+												span 2
+
+		//end cases
+
+		-
+			servicesList = [{
+			title: 'Продвижение',
+			titleBr: 'по запросам',
+			descr: ['- Анализ текущих позиций сайта в поисковых системах', '- Подбор ключевых фраз', '- Оптимизация', '- Вывод сайта по выбранным запросам в топ', '- Удержание сайта на максимально эфективных позициях в GOOGLE и ЯНДЕКС']
+			}, {
+			title: 'Продвижение молодых сайтов',
+			descr: ['- Комплексное продвижение молодых сайтов', '- Анализ конкурентов и разработка  стратегий', '- Внутренняя работа с содержанием сайта', '- Использование “белых” способов оптимизации', '- Быстрый прирост трафика', '- Выгодная система оплаты']
+			}, {
+			title: 'Продвижение',
+			titleBr: 'в регионах',
+			descr: ['- Продвижение сайта одновременно в несколькох регионах', '- Охват крупных городов', '- Не требуется создание поддоменов', '- Не требуется открытие филиалов в других странах']
+			}, {
+			title: 'Продвижение',
+			titleBr: 'по трафику',
+			descr: ['- Проведение поискового аудита', '- Проверка юзабилити сайта, правильности индексации поисковиками', '- Подбор запросов', '- Работа с сайтами или доработка страниц']
+			}, {
+			title: 'SEO-аудит и',
+			titleBr: 'разбор сайта',
+			descr: ['- Анализ эффективности продвижения и оптимизации сайта', '- Анализ корректности работы функционала и HTML ', '- Планирование работ по seo']
+			}, {
+			title: 'Интернет-магазины',
+			descr: ['- Эффективные решения для привлечения новых клиентов', '- Комплексное продвижение', '- Работа с крупными и небольшими сайтами в сфере онлайн-торговли']
+			}]
+		-services = { classMod: '_type-1', title: true }
+		include ../components/services
+
+		//begin promo
+		+b.SECTION.promo.has-bg(style='background-image: url(static/img/bg/promo_bg.jpg)')
+			+e.container.container
+				+e.title.title-lg
+					h2 ПРОДВИЖЕНИЕ ДЛЯ ЛЮБОГО РАЗМЕРА БИЗНЕСА
+				+e.row.row
+					+e.text
+						p Мы помогаем компаниям любого размера в Google, будь то местный поиск или всероссийский. Каждая кампания по продвижению ориентирована на клиента и аудиторию и не имеет значения, новый у вас сайт или существующий.
+						p Мы последовательно выполняем методики, чтобы обеспечить максимальную эффективность вашего сайта в поисковых системах Яндекс и Google. Наша работа затем отправляется вам по электронной почте со статистикой, связанной с производительностью. Напишите нам сегодня по адресу
+							a(href='mailto:sales@akticom.ru') sales@akticom.ru
+
+					+e.img-wrap
+						+e.img(style='background-image: url(static/img/content/mac.png)')
+		//end promo
+
+		-
+			servicesList = [{
+			title: 'Тех.поддержка',
+			titleBr: 'сайтов',
+			descr: ['- Контроль работы и оплаты домена и хостинга', '- Устранение ошибок, вирусов, неполадок', '- Рекомендации по повышению эффективности работы сайта', '- Отслеживание неработающих элементов  ', '- Внедрение новых функций, наполнение страниц информацией']
+			}, {
+			title: 'SMM',
+			titleBr: 'продвижение',
+			descr: ['- Тысячи "живых" подписчиков ', '- Увеличение социального отклика', '- Высокая конверсия в покупку', '- Работа с лидерами мнений', '- Первые ощутимые результаты уже через 30 дней']
+			}, {
+			title: 'Копирайтинг',
+			descr: ['- Увеличение конверсии за счёт продающего описания товара  ', '- Качественный и уникальный seo-копирайтинг, легко воспринимающийся  читателями и удовлетворяющий роботов', '- Наличие необходимых ключевых фраз при сохранении естественности и лёгкости слога  ', '- Привлечение потенциальных клиентов, которые случайно попали на сайт', '- Создание доверительного отношения и убеждение в эксперности']
+			}, {
+			title: 'e-mail',
+			titleBr: 'маркетинг',
+			descr: ['- эффективность общения компании с клиентом посредством email - рассылок', '- Увеличение количества повторных продаж и допродаж (upsell)', '- Напоминание клиентам о недавно просмотренных товарах', '- Информирование о новых поступлениях, акциях и новостях', '- Предложение персональных скидок']
+			}, {
+			title: 'Контекстая',
+			titleBr: 'реклама',
+			descr: ['- Мощные инструменты контекстной рекламы Яндекс.Директ + Google Adwords+«Бегун»', '- Ростт продаж уже спустя два-три дня', '- Быстрая и своевременная корректировка вашей рекламной кампании ', '- Достижение максимального эффекта в комплексе с SEO', '- Анлитика стоимости вложений']
+			}, {
+			title: 'Управление',
+			titleBr: 'репутацией бренда',
+			descr: ['- Повышение лояльности клиентов', '- Помощь репутации вашего бренда', '- Донесение до конечного пользователя ключевой идеи вашего бизнеса', '- Работа с отзывами или отработка имеющегося негатива', '- формирование положительного имиджа бренда', '- Привлечение лидеров мнений']
+			}]
+		-services = { classMod: '_type-2', title: false }
+		include ../components/services
+
+		//begin team
+		+b.SECTION.team#team.has-bg(style='background-image: url(static/img/bg/team_bg.jpg)')
+			+e.container.container
+				+e.title.title-md
+					h2 В нашей команде выходцы
+						span ТОП10 SEO-компаний
+						= ' '
+						| страны
+
+				+e.descr
+					p Наша команда имеет многолетний опыт работы с компаниями всех размеров и специальные знания о том, как развивать бизнес в Интернете. Мы рассматриваем SEO как ключевой инструмент ИТ-маркетинга, и если он будет работать хорошо, будет достигнута высокая отдача от инвестиций копании.
+					//p У каждой компании, с которой мы работаем есть разные бизнес-цели, и мы предлагаем стратегию для их достижения, выслушивая все пожелания клиентов.
+					+e.contact
+						p Позвоните сегодня по телефону
+							a(href='tel:+74954093216') +7 (495) 409-3216
+		//end team
+
+		//begin scheme
+		+b.SECTION.scheme.has-bg#scheme(style='background-image: url(static/img/bg/scheme_bg.jpg)')
+			+e.container.container
+				+e.title.title-md
+					h2 Схема работы с нами
+
+				+e.block
+					+e.item._right
+						+e.item-count
+						+e.item-content
+							+e.item-text
+								p Получаем вашу заявку
+							+e.A.item-btn.btn._yellow._xs(href='#!') Оставить заявку
+
+					+e.item._left
+						+e.item-count
+						+e.item-content
+							+e.item-text
+								span Анализируем текущую ситуацию.
+								p Составляем медиа-план продвижение сайта.
+
+					+e.item._right
+						+e.item-count
+						+e.item-content
+							+e.item-text
+								p
+									span Прописываем все условия
+									= ' '
+									| и план работы в Договоре, знакомим Вас с персональным менеджером и начинаем действовать!
+
+					+e.item._left
+						+e.item-count
+						+e.item-content
+							+e.item-text
+								p Вы получаете первые звонки и обращения уже 
+									span в первую неделю
+									= ' '
+									| после начала работ!
+		//end scheme
+
+		//begin clients
+		+b.SECTION.clients
+			+e.container.container
+				+e.title.title-md
+					h2 Среди наших клиентов
+
+				+e.slider
+					-
+						clientsList = [
+						'baby-club',
+						'bg-company',
+						'dom-cvetov',
+						'alp',
+						'suvenir',
+						'samtu',
+						'avtolit',
+						'bel-okna',
+						'el-company',
+						'geran',
+						'grand-est',
+						'klumba',
+						'nit-auto',
+						'optipart',
+						'polyglot',
+						'stalinvest',
+						'vizit'
+						]
+
+					for clientsImg in clientsList
+						+e.slider-item
+							+e.slider-logo(style=`background-image: url(static/img/content/clients/${clientsImg}.jpg)`)
+		//end clients
+
+		//begin our-thanks
+		+b.SECTION.our-thanks
+			+e.container.container
+				+e.title.title-md
+					h2 Нас благодарят
+				+e.photos-row.row
+					-thanksList = [1, 2, 3, 4]
+
+					for item, i in thanksList
+						a(href=`static/img/content/docs/thanks_${i + 1}-lg.jpg` data-fancybox='thanks')
+							img(src=`static/img/content/docs/thanks_${i + 1}-sm.jpg` alt='image')
+		//end our-thanks
+
+		//begin calc
+		+b.SECTION.calc.has-bg#calc(style='background-image: url(static/img/bg/calc_bg.jpg)')
+			+e.container.container
+				+e.title.title-md
+					h2 Рассчитайте стоимость продвижения
+						span за 30 минут
+
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-row
+						+e.form-fields
+							+e.form-group.form-group
+								+e.INPUT.form-control.form-control(type='text' placeholder='Введите адрес сайта' name='' required)
+
+							+e.form-group.form-group
+								+e.INPUT.form-control.form-control(type='tel' pattern='^[ 0-9]+$' placeholder='Ваш телефон' name='' required)
+						+e.form-actions
+							+e.form-range
+								+b.INPUT.js-input-range(type='text' name='' required data-range-min='1' data-range-max='100' data-range-default='50')
+							p Сколько обращений от новых клиентов в день вы хотели бы от сайта
+
+					+e.INPUT.form-submit.btn._yellow._md(type='submit' value='Узнать стоимость в течение 30 минут')
+		//end calc
+
+		//begin get-answers
+		+b.SECTION.get-answers(style='background-image: url(static/img/bg/get-answers_bg.png)')
+			+e.container.container
+				+e.inner
+					+e.title.title-md
+						h2
+							span Максимальное погружение
+							= ' '
+							| в проект
+					+e.descr
+						p Перед стартом работ мы обсуждаем с вами
+							span более 190 вопросов
+							| , специально подготовленных для вашей ниши.
+
+					+e.A.btn.btn._yellow._md(href='#!') Получить вопросы на почту
+		//end get-answers
+
+		include ../components/popup

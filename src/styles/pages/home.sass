@@ -1,0 +1,782 @@
+// *** begin screen *** //
+.screen
+   height: 100vh
+   +cover
+   +lg
+      padding-top: 100px
+   +xs
+      padding-top: 80px
+   &__container
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      
+   &__inner
+      max-width: 760px
+      color: #fff
+      
+   &__text
+      margin-bottom: 50px
+      +md
+         margin-bottom: 20px
+   
+   &__title
+      margin-bottom: 50px
+      +f('ban300', 58)
+      line-height: 1
+      text-align: left
+      +lg
+         margin-bottom: 20px
+      +xs
+         margin-bottom: 20px
+         font-size: 26px
+      br
+         +xs
+            display: none
+   &__sub-title
+      max-width: 500px
+      margin-bottom: 30px
+      color: $color1
+      text-align: left
+      +xs
+         margin-bottom: 15px
+         font-size: 26px
+         line-height: 30px
+   &__descr
+      max-width: 400px
+      p
+         +f('lat300')
+         font-size: 22px
+         line-height: 25px
+         +xs
+            font-size: 17px
+            line-height: 23px
+         
+   &__form
+      display: flex
+      align-items: center
+      +xs
+         flex-direction: column
+      &-group
+         margin-right: 30px
+         +xs
+            margin: 0 0 20px
+// end screen //
+
+// *** begin why-us *** //
+.why-us
+   padding: 90px 0 70px
+   text-align: center
+   +xs
+      padding: 50px 0 40px
+   &__title
+      margin-bottom: 80px
+      +md
+         max-width: 680px
+         margin: 0 auto 60px
+      +xs
+         margin: 0 auto 30px
+   &__row
+      margin: 0 -15px 70px
+      +md
+         flex-wrap: wrap
+         justify-content: center
+      +xs
+         margin: 0 -15px 30px
+   
+   &__item
+      flex: 0 0 (100% / 6)
+      padding: 0 15px
+      +md
+         flex: 0 0 33.33333%
+      +xs
+         flex: 0 1 100%
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 30px
+      &-icon
+         background-image: url(../img/sprites/why-us_spr.png)
+         background-repeat: no-repeat
+         &-wrap
+            display: inline-block
+            margin-bottom: 13px
+            height: 95px
+      &-title
+         margin-bottom: 3px
+         +f('ban700')
+         font-size: 20px
+         line-height: 22px
+         color: #f69d35
+      &-descr
+         +f('ban400')
+         font-size: 16px
+         
+.icon-why-us_hand
+   width: 109px
+   height: 74px
+   background-position: -10px -10px
+
+.icon-why-us_light
+   width: 54px
+   height: 80px
+   background-position: -139px -10px
+
+.icon-why-us_monitor
+   width: 85px
+   height: 80px
+   background-position: -10px -110px
+
+.icon-why-us_plane
+   width: 86px
+   height: 78px
+   background-position: -115px -110px
+
+.icon-why-us_spec
+   width: 105px
+   height: 73px
+   background-position: -213px -10px
+
+.icon-why-us_star
+   width: 69px
+   height: 94px
+   background-position: -221px -103px
+         
+// end why-us //
+
+// *** begin issues *** //
+.issues
+   padding: 50px 0 90px
+   counter-reset: issuesCount
+   border-top: 1px solid #f4f3e7
+   +xs
+      padding: 50px 0
+   &__title
+      margin-bottom: 40px
+      
+   &__block
+      padding-left: 100px
+      +md
+         padding-left: 0
+         
+   &__item
+      display: flex
+      align-items: center
+      +f('ban300', 20, 26)
+      counter-increment: issuesCount
+      +md
+         max-width: 690px
+         margin: 0 auto
+         flex-direction: column
+         text-align: center
+         
+      &:not(:last-child)
+         margin-bottom: 15px
+         +md
+            margin-bottom: 30px
+   &__count
+      flex: 0 0 70px
+      width: 70px
+      height: 70px
+      margin-right: 30px
+      text-align: center
+      +f('ban700', 27)
+      line-height: 70px
+      color: #d6d6d6
+      border: 3px solid #ebebeb
+      +md
+         margin: 0 0 10px
+      &::after
+         content: counter(issuesCount)
+   &__descr
+      flex: 0 0 280px
+      +md
+         flex: 0 1 auto
+         margin-bottom: 15px
+         +f('ban700')
+   
+   &__solution
+      position: relative
+      flex: 1 1 auto
+      padding-left: 120px
+      +md
+         padding-left: 0
+      &::before
+         position: absolute
+         top: 50%
+         left: 20px
+         width: 70px
+         height: 1px
+         background-color: #828282
+         content: ''
+         +md
+            top: -6px
+            left: 50%
+            width: 100px
+            margin-left: -50px
+      span
+         +f('ban700')
+         color: #0fab6b
+// end issues //
+
+// *** begin call-block *** //
+.call-block
+   padding: 58px 0
+   +xs
+      padding: 50px 0
+   &::after
+      background: rgba(#7031ab, .95)
+   &__container
+      max-width: 700px
+      
+   &__form
+      display: flex
+      justify-content: space-between
+      +xs
+         flex-direction: column
+         align-items: center
+      &-group
+         min-width: 470px
+         +xs
+            min-width: 0
+            width: 100%
+            margin-bottom: 20px
+      &-control
+         padding: 0 35px
+         background: rgba(#fff, .15)
+         color: #fff
+         +placeholder-color(#fff)
+// end call-block //
+
+// *** begin cases *** //
+.cases
+   padding: 60px 0 230px
+   color: #fff
+   +xs
+      padding: 50px 0
+   &::after
+      background: rgba(#2e0f31, .92)
+      content: ''
+   &__main-title
+      margin-bottom: 45px
+      text-align: left
+      +md
+         margin-bottom: 20px
+   &__slider
+      padding-bottom: 50px
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25)
+      +md
+         padding-bottom: 20px
+      +xs
+         border-bottom: 0
+      .slick-list
+         margin: 0 -15px
+      .slider__btn
+         +md
+            top: 10px
+         
+         svg
+            fill: $color1
+         &:hover svg
+            fill: #ff7f00
+         &_prev
+            left: -50px
+            +md
+               left: 0
+         &_next
+            right: -50px
+            +md
+               right: 0
+   &__item
+      padding: 0 15px
+      &-inner
+         margin: 0 -15px
+         +clr
+      &-col
+         float: left
+         padding: 0 15px
+         +md
+            float: none
+         &:nth-child(1)
+            width: percentage(800/1200)
+            +md
+               margin-bottom: 30px
+               width: 100%
+            +xs
+               margin-bottom: 20px
+   
+            .cases__item-top
+               padding: 0 40px 15px
+               +xs
+                  padding: 0 30px 15px
+         &:nth-child(2)
+            width: percentage(400/1200)
+            +md
+               width: 100%
+      &-top
+         border-bottom: 2px solid rgba(#fff, .25)
+         padding-bottom: 26px
+         +xs
+            padding-bottom: 15px
+   
+   &__info
+      +clr
+      &-col
+         float: left
+         +xs
+            float: none
+         &:nth-child(1)
+            width: 160px
+            text-align: center
+            +xs
+               margin: 0 auto 20px
+         &:nth-child(2)
+            width: calc(100% - 160px)
+            padding-left: 30px
+            +xs
+               display: flex
+               flex-direction: column
+               padding-left: 0
+               width: 100%
+   &__title
+      +f('ban700', 23, 23)
+      +xs
+         text-align: center
+         font-size: 20px
+         line-height: 20px
+      
+   &__logo
+      height: 60px
+      margin-bottom: 20px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 50% 50%
+   &__links
+      height: 30px
+   &__link
+      display: block
+      color: #0fab6b
+      +f('ban400', 20, 20)
+      span
+         border-bottom-style: solid
+   &__result
+      margin-top: 30px
+      &-icon
+         display: inline-block
+         width: 37px
+         height: 37px
+         margin-bottom: 10px
+         +cover-img
+      p
+         +f('lat300', 15)
+         span
+            display: block
+            +f('lat400', 18, 18)
+            color: #0fab6b
+   &__info
+      padding: 20px 0 0
+      &-title
+         margin-bottom: 20px
+         font-size: 23px
+      &-list
+         margin-bottom: 30px
+         +f('lat400', 16, 16)
+         +xs
+            margin-bottom: 20px
+         ul
+            li
+               &:not(:last-child)
+                  margin-bottom: 10px
+      &-descr
+         +f('lat300', 16, 20)
+         
+   &__request
+      &-title
+         display: flex
+         align-items: flex-start
+         font-size: 20px
+      &-logo
+         margin: 0 auto 0 10px
+         
+      &-table
+         +f('lat300', 15, 15)
+   
+         ul
+            li
+               padding: 10px 25px 10px 0
+               border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+               +xs
+                  padding: 10px 8px 10px 0
+               span
+                  float: right
+                  
+   &__region
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      +xs
+         margin: 10px 0 0
+         order: 1
+      &-title
+         margin-right: 25px
+      &-cities
+         +f('lat400', 15, 20)
+         color: #fff
+         +xs
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+         button
+            +xs
+               margin: 0 0 5px
+      &_mod
+         margin-bottom: 5px
+         .cases__region-title
+            margin-right: 5px
+   &__tabs
+      &-nav
+         margin-bottom: 10px
+         +xs
+            order: 1
+            margin: 15px 0 10px
+// end cases //
+
+// *** begin promo *** //
+.promo
+   padding: 65px 0 215px
+   color: #fff
+   +md
+      padding: 65px 0 165px
+   +xs
+      padding: 50px 0
+      
+   &::after
+      background: rgba(#2e0f31, .9)
+   &__title
+      margin-bottom: 45px
+      +xs
+         margin-bottom: 25px
+   &__row
+      margin: 0
+      +md
+         flex-direction: column
+   &__text
+      flex: 0 0 610px
+      margin-right: 50px
+      +md
+         flex: 0 1 auto
+         margin-right: 0
+      p
+         +f('lat300', 22, 35)
+         +xs
+            font-size: 18px
+            line-height: 25px
+         &:not(:last-child)
+            margin-bottom: 37px
+            +xs
+               margin-bottom: 20px
+      a
+         +trs
+         &:hover
+            color: $color1
+      
+   &__img
+      +ratio(506, 400)
+      +cover
+      &-wrap
+         flex: 0 1 506px
+         margin-top: 10px
+         +md
+            order: -1
+            flex: 0 1 auto
+            width: 370px
+            margin: 0 auto 30px
+         +xs
+            width: 100%
+// end promo //
+
+// *** begin team *** //
+.team
+   padding: 50px 0 65px
+   color: #fff
+   &::after
+      background: rgba(#2e0f31, .8)
+   
+   &__title
+      margin-bottom: 325px
+      font-size: 40px
+      +xs
+         margin-bottom: 30px
+      span
+         font-size: 45px
+         +xs
+            font-size: 30px
+   
+   &__descr
+      font-size: 22px
+      line-height: 35px
+      +xs
+         font-size: 18px
+         line-height: 28px
+      p
+         margin-right: 100px
+         padding-top: 15px
+         +f('lat300')
+      > p:first-child
+            padding-top: 150px
+   &__contact
+      margin-top: 35px
+      text-align: center
+      a
+         +f('lat700')
+         +xs
+            display: block
+// end team //
+
+// *** begin scheme *** //
+.scheme
+   padding: 100px 0 190px
+   color: #fff
+   counter-reset: schemeCount
+   +md
+      padding: 90px 0
+   +xs
+      padding: 50px 0
+   &::after
+      background: rgba(#000, .72)
+      content: ''
+   &__title
+      margin-bottom: 45px
+      +xs
+         margin-bottom: 30px
+   &__block
+      display: flex
+      flex-direction: column
+   &__item
+      $parent: &
+      display: flex
+      align-items: center
+      width: 53.1%
+      counter-increment: schemeCount
+      +md
+         width: 100%
+      +xs
+         flex-direction: column
+         text-align: center
+      &:not(:last-child)
+         margin-bottom: 50px
+      &_left
+         align-self: flex-start
+         justify-content: flex-end
+         text-align: right
+         +md
+            justify-content: flex-start
+            text-align: left
+      &_right
+         align-self: flex-end
+      
+      &-count
+         display: flex
+         align-items: center
+         justify-content: center
+         flex: 0 0 74px
+         width: 74px
+         height: 74px
+         border: 3px solid $color1
+         border-radius: 50%
+         color: $color1
+         +f('ban700', 27, 27)
+         +xs
+            margin: 0 0 15px
+         &::after
+            content: counter(schemeCount)
+         #{$parent}_left &
+            order: 1
+            +md
+               order: 0
+      &-content
+         position: relative
+         width: 100%
+         &::before
+            position: absolute
+            top: 50%
+            height: 1px
+            width: 70px
+            background: rgba(#fff, .5)
+            content: ''
+            +xs
+               display: none
+         #{$parent}_left &
+            padding-right: 145px
+            +md
+               padding-right: 0
+               padding-left: 120px
+            +xs
+               padding-left: 0
+            &::before
+               right: 45px
+               +md
+                  right: auto
+                  left: 25px
+         #{$parent}_right &
+            padding-left: 145px
+            +md
+               padding-left: 120px
+            +xs
+               padding-left: 0
+            &::before
+               left: 45px
+               +md
+                  left: 25px
+      &-text
+         font-size: 23px
+         line-height: 30px
+         +xs
+            font-size: 19px
+            line-height: 25px
+         span
+            +f('ban700')
+   
+      &-btn
+         margin-top: 15px
+// end scheme //
+
+// *** begin clients *** //
+.clients
+   padding: 90px 0 45px
+   +xs
+      padding: 50px 0 40px
+   &__title
+      margin-bottom: 40px
+      +xs
+         margin-bottom: 20px
+   &__slider
+      display: none
+      +md
+         padding: 0 30px
+      &.slick-initialized
+         display: block
+      &-item
+         margin: 0 15px
+      &-logo
+         height: 120px
+         background-repeat: no-repeat
+         background-size: contain
+         background-position: 50% 50%
+         filter: grayscale(100%)
+         transition: .5s ease
+         &:hover
+            filter: grayscale(0)
+   
+// end clients //
+
+// *** begin thanks *** //
+.our-thanks
+   padding: 75px 0
+   background: #f3f3ed
+   +xs
+      padding: 50px 0
+   &__container
+      max-width: 1000px
+   &__title
+      margin-bottom: 30px
+   &__photos-row
+      justify-content: center
+      flex-wrap: wrap
+      > a
+         position: relative
+         flex: 0 0 170px
+         margin: 0 15px 30px
+         height: 240px
+         box-shadow: 0 11px 27px rgba(30, 30, 30, 0.26)
+         +cover-img
+         &:hover::before
+            opacity: 1
+            transform: scale(1)
+         &::before
+            opacity: 0
+            transform: scale(.8)
+            +coverdiv
+            transition: .3s ease
+            background: rgba($color2, .7)
+            content: ''
+// end thanks //
+
+// *** begin calc *** //
+.calc
+   padding: 125px 0 100px
+   +xs
+      padding: 65px 0
+   &::after
+      background: rgba(#000, .72)
+   &__container
+      max-width: 750px
+      text-align: center
+   &__title
+      margin: 0 auto 40px
+      color: #fff
+   &__form
+      &-row
+         display: flex
+         justify-content: space-between
+         margin-bottom: 65px
+         text-align: left
+         +xs
+            flex-direction: column
+            margin-bottom: 20px
+            
+      &-fields
+         flex: 0 0 320px
+         +xs
+            flex: 0 1 auto
+            margin-bottom: 30px
+      &-group
+         &:not(:last-child)
+            margin-bottom: 12px
+      &-control
+         background: rgba(#fff, .2)
+         +placeholder-color(#fff)
+      &-actions
+         flex: 0 0 370px
+         +xs
+            flex: 0 1 auto
+         p
+            color: #fff
+            +xs
+               text-align: center
+      &-range
+         margin-bottom: 10px
+         
+// end calc //
+
+// *** begin get-answers *** //
+.get-answers
+   padding: 235px 0 150px
+   text-align: center
+   background-size: contain
+   background-repeat: no-repeat
+   background-position: 50% 50%
+   +xs
+      padding: 60px 0
+      background-size: cover
+   &__inner
+      max-width: 660px
+      margin: 0 auto
+      color: #20262e
+      +f('lat300', 22, 30)
+   
+   &__title
+      margin-bottom: 45px
+      padding: 0 20px
+      +xs
+         margin-bottom: 20px
+   &__descr
+      margin-bottom: 55px
+      +xs
+         margin-bottom: 25px
+         font-size: 18px
+         line-height: 22px
+      span
+         +f('lat700')
+
+// end get-answers //

@@ -1,0 +1,85 @@
+// *** begin services *** //
+.services
+   &_type-1
+      padding: 50px 0 100px
+      margin-top: -252px
+      +xs
+         padding: 50px 0
+         margin-top: 0
+   &_type-2
+      padding: 0 0 85px
+      margin-top: -145px
+      +xs
+         padding: 20px 0 50px
+         margin-top: 0
+   &__row
+      flex-wrap: wrap
+      justify-content: center
+   &__title
+      color: #fff
+      +xs
+         margin-bottom: -15px
+         color: #000
+   &__item
+      $parent: &
+      position: relative
+      flex: 0 1 calc(33.33333% - 30px)
+      margin: 30px 15px 0
+      max-width: 370px
+      min-width: 370px
+      box-shadow: 0 24px 29px rgba(0, 0, 0, 0.13)
+      border-radius: 3px
+      background: #fff
+      cursor: default
+      +md
+         min-width: 0
+         flex: 0 1 calc(50% - 30px)
+         cursor: pointer
+      +xs
+         flex: 0 1 calc(100% - 30px)
+      &:hover #{$parent}-more
+         opacity: 1
+         transform: scale(1)
+      
+      &-title
+         display: flex
+         justify-content: center
+         align-items: center
+         height: 115px
+         padding: 10px 15px
+         border-bottom: 2px solid #e0e0d1
+         +f('ban700', 30, 35)
+         text-align: center
+      &-list
+         padding: 30px 30px 45px
+         font-size: 18px
+         line-height: 25px
+         +xs
+            padding: 20px 20px 25px
+         ul
+            li
+               &:not(:last-child)
+                  margin-bottom: 25px
+      &-more
+         +coverdiv
+         display: flex
+         flex-direction: column
+         justify-content: center
+         align-items: center
+         padding: 30px
+         opacity: 0
+         transform: scale(.8)
+         transition: .3s ease
+         text-align: center
+         background: rgba($color2 , .95)
+      &-price
+         margin-bottom: 25px
+         font-size: 30px
+         line-height: 35px
+         color: #fff
+         span
+            +f('ban700', 40, 40)
+      &-btn
+         padding: 17px 20px
+         min-width: 222px
+// end services //
