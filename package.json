@@ -18,6 +18,7 @@
     "jquery": "^3.3.1",
     "npm": "^5.8.0",
     "object-fit-images": "^3.2.3",
+    "vintage-popup": "^0.1.10",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.8.1"
   },

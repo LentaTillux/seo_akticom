@@ -78,7 +78,7 @@ block main
 					each item in whyList
 						+whyItem(item)
 
-				+e.A.btn.btn._yellow._lg(href='#!') Оставить заявку на расчет стоимости
+				+e.A.btn.btn._yellow._lg(href='#' data-popup-target='requestPopup' data-link-info='why-us: (Оставить заявку на расчет стоимости)') Оставить заявку на расчет стоимости
 		//end why-us
 
 		//begin issues
@@ -654,7 +654,7 @@ block main
 
 				+e.descr
 					p Наша команда имеет многолетний опыт работы с компаниями всех размеров и специальные знания о том, как развивать бизнес в Интернете. Мы рассматриваем SEO как ключевой инструмент ИТ-маркетинга, и если он будет работать хорошо, будет достигнута высокая отдача от инвестиций копании.
-					p У каждой компании, с которой мы работаем есть разные бизнес-цели, и мы предлагаем стратегию для их достижения, выслушивая все пожелания клиентов.
+					//p У каждой компании, с которой мы работаем есть разные бизнес-цели, и мы предлагаем стратегию для их достижения, выслушивая все пожелания клиентов.
 					+e.contact
 						p Позвоните сегодня по телефону
 							a(href='tel:+74954093216') +7 (495) 409-3216
@@ -672,7 +672,7 @@ block main
 						+e.item-content
 							+e.item-text
 								p Получаем вашу заявку
-							+e.A.item-btn.btn._yellow._xs(href='#!') Оставить заявку
+							+e.A.item-btn.btn._yellow._xs(href='#' data-popup-target='requestPopup' data-link-info='scheme: (Схема работы с нами)') Оставить заявку
 
 					+e.item._left
 						+e.item-count
@@ -770,7 +770,7 @@ block main
 		//end calc
 
 		//begin get-answers
-		+b.SECTION.get-answers(style='background-image: url(static/img/bg/get-answers_bg.png)')
+		+b.SECTION#get-answers.get-answers(style='background-image: url(static/img/bg/get-answers_bg.png)')
 			+e.container.container
 				+e.inner
 					+e.title.title-md
@@ -783,5 +783,6 @@ block main
 							span более 190 вопросов
 							| , специально подготовленных для вашей ниши.
 
-					+e.A.btn.btn._yellow._md(href='#!') Получить вопросы на почту
+					+e.A.btn.btn._yellow._md(href='#!' data-popup-target='requestPopup' data-link-info='get-answers: (Получить более 190 вопросов на почту)') Получить вопросы на почту
 		//end get-answers
+
