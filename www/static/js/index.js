@@ -26431,13 +26431,13 @@ var Sliders = function () {
 
         $(slider).slick($.extend({}, _this.defaultSlickOpts, {
           infinite: true,
-          slidesToShow: 6,
-          slidesToScroll: 6,
+          slidesToShow: 4,
+          slidesToScroll: 4,
           responsive: [{
             breakpoint: 1250,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3
+              slidesToShow: 4,
+              slidesToScroll: 4
             }
           }, {
             breakpoint: 767,
