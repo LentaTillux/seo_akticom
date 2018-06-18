@@ -20857,6 +20857,8 @@ __webpack_require__(337);
 
 __webpack_require__(339);
 
+__webpack_require__(345);
+
 __webpack_require__(340);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -32252,6 +32254,29 @@ var Home = function () {
 }();
 
 exports.default = Home;
+
+/***/ }),
+/* 345 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+//initReadMore('.js-cases__info-descr');
+
+function initReadMore($parentSelector) {
+  var $parent = $($parentSelector);
+  var $readMore = $('.js-read-more');
+  var $readMoreParent = $('.js-read-more').closest($parentSelector);
+
+  $readMore.each(function () {
+    var $this = $(this);
+    $this.on('click', function () {
+      $readMoreParent.toggleClass('is-show');
+    });
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)))
 
 /***/ })
 /******/ ]);

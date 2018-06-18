@@ -5,6 +5,7 @@ import './Header';
 import './Sliders';
 import './RangeInput';
 import './tabs';
+import './readMore';
 import './popupInit';
 
 // import './ContactMap';
